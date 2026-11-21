@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Follow Cam Dyer's senior season at SUNY Brockport — gameday vlogs, the Road to 1,000, and his trip to play pro clubs in Portugal. Support the journey.">
+<meta property="og:title" content="Cam Dyer — Senior Season to Pro">
+<meta property="og:description" content="Gameday vlogs, Road to 1,000 and the trip to Portugal. Support the journey.">
+<meta property="og:image" content="share.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<title>Cam Dyer — Senior Season to Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b0f0d; --ink2:#111815; --panel:#151e1a; --line:#24322c;
+  --green:#00694a; --green2:#0a8a63; --gold:#f6b81a; --gold2:#ffd35c;
+  --text:#eef3f0; --muted:#9fb1a8; --red:#e5484d; --win:#2fbf71;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5;overflow-x:hidden}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.display{font-family:Anton,Impact,sans-serif;letter-spacing:.5px;text-transform:uppercase;line-height:.95}
+.cond{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:1px}
+.eyebrow{font-family:"Barlow Condensed",sans-serif;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-size:14px}
+section{padding:84px 0;position:relative}
+h2.display{font-size:clamp(40px,6vw,72px);margin:6px 0 14px}
+.lead{color:var(--muted);max-width:640px;font-size:17px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(11,15,13,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .badge{width:36px;height:36px;border-radius:9px;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-family:Anton;font-size:20px}
+.logo b{font-family:Anton;font-size:20px;letter-spacing:1px}
+.navlinks{display:flex;gap:4px;margin-left:auto}
+.navlinks a{font-family:"Barlow Condensed";font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:8px;font-size:15px}
+.navlinks a:hover{color:var(--text);background:var(--panel)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:12px 22px;font-family:"Barlow Condensed";font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:16px;text-decoration:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold2)}
+.btn-ghost{background:transparent;color:var(--text);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-sm{padding:8px 14px;font-size:14px}
+@media(max-width:860px){.navlinks{display:none}nav .btn{margin-left:auto}}
+
+/* hero */
+.hero{padding:56px 0 70px;overflow:hidden;background:
+  radial-gradient(900px 500px at 85% 10%,rgba(0,105,74,.45),transparent 60%),
+  radial-gradient(600px 400px at 0% 100%,rgba(246,184,26,.12),transparent 60%),var(--ink)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(76px,13vw,168px)}
+.hero h1 span{color:var(--gold);display:block}
+.tagline{font-family:"Barlow Condensed";font-weight:700;font-size:clamp(20px,2.6vw,28px);letter-spacing:2px;text-transform:uppercase;margin:16px 0 10px}
+.tagline em{font-style:normal;color:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 28px}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--muted)}
+.chip b{color:var(--text)}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.jersey{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:linear-gradient(160deg,#0d5a41,#062a1f 70%);border:1px solid #1f4a3b;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.jersey svg.court{position:absolute;inset:0;width:100%;height:100%;opacity:.22}
+.jersey .num{position:absolute;inset:0;display:grid;place-items:center;font-family:Anton;font-size:min(46vw,300px);color:var(--gold);text-shadow:0 10px 0 rgba(0,0,0,.25)}
+.jersey .name{position:absolute;top:22px;left:0;right:0;text-align:center;font-family:Anton;font-size:34px;letter-spacing:6px}
+.jersey img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.jersey .cap{position:absolute;bottom:0;left:0;right:0;padding:16px 18px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-family:"Barlow Condensed";font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:14px;display:flex;justify-content:space-between}
+.statbar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:44px}
+.statbar div{background:var(--ink2);padding:18px 16px}
+.statbar .v{font-family:Anton;font-size:38px;color:var(--gold);line-height:1}
+.statbar .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px}
+@media(max-width:700px){.statbar{grid-template-columns:repeat(2,1fr)}}
+
+/* journey */
+#journey{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.route{margin:36px 0 22px;position:relative}
+.stops{display:flex;gap:0;overflow-x:auto;scrollbar-width:none;padding:6px 2px 14px;position:relative}
+.stops::-webkit-scrollbar{display:none}
+.stop{flex:1 0 128px;background:none;border:0;color:var(--muted);text-align:center;position:relative;padding:0 6px}
+.stop .dot{width:22px;height:22px;border-radius:50%;margin:0 auto 10px;background:var(--ink);border:3px solid var(--line);position:relative;z-index:2;transition:all .2s}
+.stop::before{content:"";position:absolute;top:10px;left:-50%;right:50%;height:3px;background:var(--line);z-index:1}
+.stop:first-child::before{display:none}
+.stop.done::before{background:var(--green2)}
+.stop.done .dot{border-color:var(--green2);background:var(--green)}
+.stop.active .dot{border-color:var(--gold);background:var(--gold);box-shadow:0 0 0 6px rgba(246,184,26,.18);transform:scale(1.15)}
+.stop.future .dot{border-style:dashed}
+.stop .yr{font-family:"Barlow Condensed";font-weight:800;letter-spacing:1.5px;font-size:13px;text-transform:uppercase}
+.stop .pl{font-size:13px;line-height:1.25;margin-top:2px}
+.stop.active{color:var(--text)}
+.stop.active .yr{color:var(--gold)}
+.chapter{display:grid;grid-template-columns:1fr 1.25fr;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;min-height:340px}
+@media(max-width:820px){.chapter{grid-template-columns:1fr}}
+.chapter .art{position:relative;background:linear-gradient(150deg,var(--green),#05251b);padding:28px;display:flex;flex-direction:column;justify-content:flex-end;min-height:240px;overflow:hidden}
+.chapter .art .big{position:absolute;top:-10px;right:-6px;font-family:Anton;font-size:160px;line-height:1;color:rgba(255,255,255,.07)}
+.chapter .art .team{font-family:Anton;font-size:clamp(32px,4vw,46px);text-transform:uppercase;line-height:1}
+.chapter .art .loc{font-family:"Barlow Condensed";font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:8px}
+.chapter .body{padding:28px 30px}
+.chapter .body h3{font-family:"Barlow Condensed";font-weight:800;font-size:28px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.chapter .body p{color:#cfdbd5;margin-bottom:14px}
+.chapter ul{list-style:none;display:grid;gap:8px;margin:6px 0 16px}
+.chapter li{padding-left:22px;position:relative;color:#cfdbd5}
+.chapter li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.mini{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 16px}
+.mini div{background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:84px}
+.mini .v{font-family:Anton;font-size:26px;color:var(--gold);line-height:1}
+.mini .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.srcs{font-size:12px;color:var(--muted)}
+.srcs a{color:var(--muted)}
+.chnav{display:flex;gap:10px;margin-top:18px}
+.chart{margin-top:44px;display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:end}
+@media(max-width:760px){.chart{grid-template-columns:1fr}}
+.bars{display:flex;gap:18px;align-items:flex-end;height:200px;border-bottom:1px solid var(--line);padding:0 6px}
+.bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:8px}
+.bar .col{width:100%;max-width:120px;border-radius:10px 10px 0 0;background:linear-gradient(180deg,var(--gold),#c98c00);height:0;transition:height 1s cubic-bezier(.2,.8,.2,1)}
+.bar .col.tbd{background:repeating-linear-gradient(45deg,#2a3a33 0 8px,#1d2924 8px 16px);border:1.5px dashed #3a5047;border-bottom:0}
+.bar .n{font-family:Anton;font-size:26px}
+.barlbls{display:flex;gap:18px;padding:8px 6px 0}
+.barlbls div{flex:1;text-align:center;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+
+/* vlogs */
+.vhead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 22px}
+.fbtn{background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:7px 14px;font-family:"Barlow Condensed";font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:14px}
+.fbtn.on{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.vcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.vcard:hover{transform:translateY(-3px);border-color:#365246}
+.thumb{aspect-ratio:16/9;position:relative;background:linear-gradient(135deg,#0c3d2d,#091a14);display:grid;place-items:center;cursor:pointer;overflow:hidden;border:0;width:100%;color:inherit}
+.thumb video,.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.thumb .ep{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--ink);font-family:Anton;padding:3px 10px;border-radius:6px;font-size:15px;letter-spacing:1px}
+.thumb .res{position:absolute;top:12px;right:12px;font-family:"Barlow Condensed";font-weight:800;padding:3px 10px;border-radius:6px;font-size:15px;letter-spacing:1px}
+.res.W{background:var(--win);color:#04170d}.res.L{background:var(--red);color:#fff}
+.play{width:64px;height:64px;border-radius:50%;background:rgba(246,184,26,.95);display:grid;place-items:center;position:relative;z-index:2;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+.play::after{content:"";border-left:20px solid var(--ink);border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px}
+.thumb .soon{position:relative;z-index:2;font-family:"Barlow Condensed";font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-align:center;font-size:15px}
+.thumb .opp{position:absolute;bottom:10px;left:14px;font-family:Anton;font-size:28px;text-transform:uppercase;color:rgba(255,255,255,.14)}
+.vinfo{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.vinfo .meta{font-size:12px;color:var(--gold);font-family:"Barlow Condensed";font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.vinfo h4{font-family:"Barlow Condensed";font-weight:800;font-size:22px;text-transform:uppercase;line-height:1.1}
+.vinfo p{color:var(--muted);font-size:14px}
+.vinfo .acts{margin-top:auto;padding-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.empty{border:1.5px dashed var(--line);border-radius:18px;padding:30px;text-align:center;color:var(--muted)}
+
+/* schedule */
+#schedule{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.nextgame{display:grid;grid-template-columns:1.3fr 1fr;gap:0;border-radius:20px;overflow:hidden;border:1px solid var(--line);margin:30px 0 26px}
+@media(max-width:760px){.nextgame{grid-template-columns:1fr}}
+.nextgame .l{background:linear-gradient(120deg,var(--green),#063524);padding:26px 28px}
+.nextgame .r{background:var(--panel);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+.nextgame .opp{font-family:Anton;font-size:clamp(34px,5vw,54px);text-transform:uppercase;line-height:1;margin:8px 0}
+.cd{display:flex;gap:10px}
+.cd div{background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:10px 0;width:72px;text-align:center}
+.cd .v{font-family:Anton;font-size:30px;color:var(--gold);line-height:1}
+.cd .l{font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+.record{display:flex;gap:22px;margin-top:14px;font-family:"Barlow Condensed";font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.record b{font-family:Anton;font-size:22px;color:var(--text);font-weight:400;margin-right:4px}
+.sched{display:grid;gap:8px}
+.game{display:grid;grid-template-columns:86px 54px 1fr auto;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.game.past{opacity:.92}
+.game.next{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.game .d{font-family:"Barlow Condensed";font-weight:800;text-transform:uppercase;letter-spacing:1px;line-height:1.1}
+.game .d small{display:block;color:var(--muted);font-weight:600;font-size:12px}
+.ha{font-family:"Barlow Condensed";font-weight:800;font-size:13px;letter-spacing:1px;text-align:center;border-radius:6px;padding:3px 0}
+.ha.H{background:rgba(246,184,26,.15);color:var(--gold)}.ha.A{background:#1e2a25;color:var(--muted)}.ha.T{background:rgba(10,138,99,.2);color:#6be0b2}
+.game .o{font-weight:600}
+.game .o small{display:block;color:var(--muted);font-weight:400;font-size:13px}
+.game .rs{font-family:"Barlow Condensed";font-weight:800;letter-spacing:1px;text-align:right;min-width:90px}
+.rs .W{color:var(--win)}.rs .L{color:var(--red)}
+.rs .t{color:var(--muted);font-weight:600}
+.vtag{display:inline-block;margin-left:8px;font-size:11px;background:var(--gold);color:var(--ink);border-radius:5px;padding:1px 6px;font-family:"Barlow Condensed";font-weight:800;letter-spacing:1px;vertical-align:2px;text-decoration:none}
+.scoreedit{display:flex;gap:6px;align-items:center}
+.scoreedit input{width:84px}
+@media(max-width:600px){.game{grid-template-columns:64px 44px 1fr;}.game .rs{grid-column:1/-1;text-align:left}}
+
+/* portugal / donate */
+#portugal{overflow:hidden;background:
+ radial-gradient(800px 500px at 100% 0%,rgba(0,102,51,.35),transparent 60%),
+ radial-gradient(700px 500px at 0% 100%,rgba(206,17,38,.18),transparent 60%),var(--ink)}
+.pt-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start;margin-top:30px}
+@media(max-width:900px){.pt-grid{grid-template-columns:1fr}}
+.cities{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+.city{border:1px solid var(--line);border-radius:16px;padding:20px;background:var(--panel)}
+.city .display{font-size:36px}
+.city p{color:var(--muted);font-size:14px;margin-top:6px}
+.covers{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.covers div{display:flex;gap:10px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-weight:600;font-size:14px}
+.covers span{font-size:20px}
+.donate{position:sticky;top:84px;background:linear-gradient(170deg,#1b261f,#121a16);border:1px solid #2e4238;border-radius:22px;padding:28px;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.donate .goal{font-family:Anton;font-size:64px;color:var(--gold);line-height:1}
+.prog{height:14px;background:var(--ink);border-radius:99px;overflow:hidden;border:1px solid var(--line);margin:16px 0 8px}
+.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green2),var(--gold));transition:width 1.2s}
+.amts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:18px 0 14px}
+.amts a{display:block;text-align:center;text-decoration:none;border:1.5px solid var(--line);border-radius:12px;padding:12px 0;font-family:Anton;font-size:22px;transition:all .15s}
+.amts a:hover{border-color:var(--gold);color:var(--gold);background:rgba(246,184,26,.06)}
+.donate .btn{width:100%;justify-content:center;font-size:20px;padding:16px}
+.sharerow{display:flex;gap:8px;margin-top:10px}
+.sharerow .btn{font-size:15px;padding:11px}
+.fine{font-size:12px;color:var(--muted);margin-top:14px}
+
+/* feedback */
+.fb-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;margin-top:30px;align-items:start}
+@media(max-width:860px){.fb-grid{grid-template-columns:1fr}}
+.form{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:12px}
+label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
+input,textarea,select{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--text);font:inherit;font-size:15px}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:110px;resize:vertical}
+.reacts{display:flex;gap:8px;flex-wrap:wrap}
+.reacts button{background:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:var(--text);font-size:14px}
+.reacts button.on{border-color:var(--gold);background:rgba(246,184,26,.12)}
+.wall{display:grid;gap:12px;max-height:620px;overflow:auto;padding-right:4px}
+.note{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.note .top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:6px}
+.note .who{font-family:"Barlow Condensed";font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:1px}
+.note .when{font-size:12px;color:var(--muted)}
+.note p{color:#d5e0db;white-space:pre-wrap;word-wrap:break-word}
+.note .x{background:none;border:0;color:var(--muted);font-size:12px;text-decoration:underline}
+.msg{font-size:14px;color:var(--muted)}
+.msg.ok{color:var(--win)}.msg.err{color:#ff8a8d}
+
+footer{border-top:1px solid var(--line);padding:46px 0 120px;background:var(--ink2)}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.soc{display:inline-flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;font-weight:600}
+.soc:hover{border-color:var(--gold)}
+.soc svg{width:22px;height:22px}
+.soc.missing{opacity:.6;border-style:dashed}
+.sources{font-size:12px;color:var(--muted);margin-top:22px;line-height:1.8}
+.sources a{color:var(--muted)}
+
+/* floating donate on mobile */
+.fab{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;display:none}
+.fab .btn{width:100%;justify-content:center;font-size:18px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+@media(max-width:860px){.fab{display:block}}
+
+/* editor */
+.lockerbtn{position:fixed;right:18px;bottom:18px;z-index:70;display:none}
+@media(max-width:860px){.lockerbtn{bottom:84px}}
+.drawer{position:fixed;inset:0;z-index:80;display:none}
+.drawer.open{display:block}
+.drawer .scrim{position:absolute;inset:0;background:rgba(0,0,0,.6)}
+.drawer .sheet{position:absolute;right:0;top:0;bottom:0;width:min(480px,100%);background:var(--ink2);border-left:1px solid var(--line);padding:22px;overflow:auto}
+.tabs{display:flex;gap:6px;margin:14px 0 18px}
+.tabs button{flex:1;background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:10px;padding:9px;font-family:"Barlow Condensed";font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.tabs button.on{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.drop{border:2px dashed var(--line);border-radius:14px;padding:22px;text-align:center;color:var(--muted);cursor:pointer}
+.drop.has{border-color:var(--gold);color:var(--text)}
+.or{text-align:center;color:var(--muted);font-size:12px;letter-spacing:2px}
+.closex{float:right;background:none;border:0;color:var(--muted);font-size:26px;line-height:1}
+.mylist{display:grid;gap:8px;margin-top:8px}
+.mylist div{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:14px}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:90;display:none;background:rgba(0,0,0,.88);place-items:center;padding:20px}
+.modal.open{display:grid}
+.modal video{max-width:min(1100px,100%);max-height:80vh;border-radius:14px;background:#000}
+.modal .mt{font-family:"Barlow Condensed";font-weight:800;font-size:22px;text-transform:uppercase;margin-top:12px;text-align:center}
+.modal .closex{position:absolute;top:16px;right:20px;font-size:36px;color:#fff}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+.ytbox{display:grid;grid-template-columns:1.4fr 1fr;gap:22px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px;margin-top:26px}
+@media(max-width:820px){.ytbox{grid-template-columns:1fr}}
+.ytframe{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000}
+.ytframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.modal iframe{width:min(420px,92vw);aspect-ratio:9/16;max-height:80vh;border:0;border-radius:14px;background:#000}
+
+/* 1000 points */
+#thousand{padding:70px 0;background:radial-gradient(700px 400px at 15% 0%,rgba(246,184,26,.12),transparent 60%),var(--ink)}
+.k-grid{display:grid;grid-template-columns:320px 1fr;gap:40px;align-items:center;margin-top:26px}
+@media(max-width:860px){.k-grid{grid-template-columns:1fr}}
+.ring{position:relative;width:300px;height:300px;margin:0 auto}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring .trk{fill:none;stroke:#1d2924;stroke-width:22}
+.ring .arc{fill:none;stroke:url(#kgrad);stroke-width:22;stroke-linecap:round;transition:stroke-dashoffset 1.6s cubic-bezier(.2,.8,.2,1)}
+.ring .ctr{z-index:1;position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.ring .togo{font-family:Anton;font-size:84px;line-height:.9;color:var(--gold)}
+.ring .sub{font-family:"Barlow Condensed";font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-size:15px}
+.ring .tot{font-family:"Barlow Condensed";font-weight:700;font-size:18px;margin-top:6px}
+.kseg{display:flex;height:34px;border-radius:10px;overflow:hidden;background:#1d2924;border:1px solid var(--line);margin:14px 0 10px}
+.kseg>div{height:100%;display:grid;place-items:center;font-family:"Barlow Condensed";font-weight:800;font-size:13px;color:var(--ink);white-space:nowrap;overflow:hidden;width:0;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.klegend{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:14px}
+.klegend>div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.klegend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.klegend .v{font-family:Anton;font-size:28px;line-height:1;margin-top:6px}
+.klegend .l{font-size:12px;color:var(--muted)}
+.kproj{margin-top:18px;background:linear-gradient(120deg,rgba(0,105,74,.35),rgba(0,105,74,.08));border:1px solid #23503f;border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.kproj b{font-family:Anton;font-size:24px;color:var(--gold);font-weight:400}
+/* certified bucket badge */
+.bucketbar{display:none;background:linear-gradient(90deg,#b77a00,var(--gold),#ffe08a,var(--gold),#b77a00);background-size:200% 100%;animation:shine 6s linear infinite;color:var(--ink)}
+.bucketbar .wrap{display:flex;align-items:center;justify-content:center;gap:12px;padding-top:9px;padding-bottom:9px;font-family:"Barlow Condensed";font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:16px;text-align:center}
+@keyframes shine{to{background-position:-200% 0}}
+body.bucket .bucketbar{display:block}
+.seal{display:none;position:absolute;top:14px;right:14px;width:132px;height:132px;z-index:5;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5));animation:sealin 1s cubic-bezier(.2,1.6,.4,1) both}
+body.bucket .seal{display:block}
+@keyframes sealin{from{transform:scale(0) rotate(-40deg)}to{transform:scale(1) rotate(-8deg)}}
+.seal-inline{display:none;align-items:center;gap:12px;margin-bottom:14px;background:rgba(246,184,26,.1);border:1px solid rgba(246,184,26,.5);border-radius:999px;padding:6px 16px 6px 6px;width:fit-content}
+.seal-inline svg{width:44px;height:44px}
+.seal-inline span{font-family:"Barlow Condensed";font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+body.bucket .seal-inline{display:flex}
+
+/* v3 additions */
+.jersey.photo .num,.jersey.photo .name,.jersey.photo svg.court{display:none}
+.jersey img#heroImg{object-position:center 22%}
+@media(max-width:700px){.hero{padding:30px 0 44px}.hero h1{font-size:72px}.hero .lead{font-size:15px}.hero-grid{gap:22px}.jersey{aspect-ratio:4/4.2}}
+.chapter .art.hasimg{background-size:cover;background-position:center 25%}
+.chapter .art.hasimg::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,20,14,.05) 30%,rgba(5,20,14,.92))}
+.chapter .art.hasimg>*{position:relative}
+.chapter .art.hasimg .big{position:absolute}
+#photos{background:var(--ink)}
+.gal{columns:4 230px;column-gap:14px;margin-top:20px}
+.gal figure{break-inside:avoid;margin:0 0 14px;border-radius:14px;overflow:hidden;position:relative;background:var(--panel);border:1px solid var(--line);cursor:zoom-in}
+.gal img{width:100%;display:block;transition:transform .4s}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.8));font-family:"Barlow Condensed";font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:13px}
+.lb{position:fixed;inset:0;z-index:95;background:rgba(0,0,0,.92);display:none;place-items:center;padding:20px}
+.lb.open{display:grid}
+.lb img{max-width:min(1100px,94vw);max-height:80vh;border-radius:12px}
+.lb .cap{text-align:center;margin-top:10px;font-family:"Barlow Condensed";font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.lb .closex{position:absolute;top:14px;right:20px;font-size:36px;color:#fff}
+.lb .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:0;color:#fff;font-size:30px;width:50px;height:50px;border-radius:50%}
+.lb .prev{left:14px}.lb .next{right:14px}
+#pro{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pro-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;margin-top:28px;align-items:start}
+@media(max-width:900px){.pro-grid{grid-template-columns:1fr}}
+.pro-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.pro-photo{width:100%;aspect-ratio:4/4.4;object-fit:cover;object-position:center 15%;display:block}
+.pro-body{padding:22px}
+.pro-name{font-family:Anton;font-size:40px;text-transform:uppercase;line-height:1}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:16px 0}
+.facts dt{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;padding-top:2px}
+.facts dd{font-weight:600}
+.reel{width:100%;border-radius:16px;background:#000;display:block;margin:10px 0 22px;aspect-ratio:3/2}
+.honors{list-style:none;display:grid;gap:8px;margin:10px 0 22px}
+.honors li{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;display:flex;gap:10px;align-items:center}
+.stats{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px}
+.stats th,.stats td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left}
+.stats th{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px}
+.stats td.n{font-family:Anton;font-size:18px;font-weight:400}
+.stats tr.tot td{color:var(--gold)}
+.miles{display:grid;gap:8px;margin:6px 0 4px}
+.miles div{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--muted)}
+.miles i{width:22px;height:22px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-style:normal;font-size:12px;flex:none}
+.miles .done{color:var(--text)}.miles .done i{background:var(--win);border-color:var(--win);color:#04170d}
+.miles b{font-family:Anton;font-weight:400;color:var(--gold);min-width:64px}
+#quotes .qgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:26px}
+.qcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;position:relative}
+.qcard::before{content:"“";position:absolute;top:-6px;left:14px;font-family:Anton;font-size:80px;color:var(--gold);opacity:.35}
+.qcard p{font-size:16px;line-height:1.55;position:relative}
+.qcard .by{margin-top:12px;font-family:"Barlow Condensed";font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--gold)}
+.credit{font-size:12px;color:var(--muted);margin-top:16px}
+.rs .line{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:12px;letter-spacing:0;color:var(--text);margin-top:3px}
+.rs .line b{color:var(--gold);font-weight:700}
+.rs a.bx{display:inline-block;margin-top:3px;font-family:Inter,sans-serif;font-size:12px;font-weight:600;letter-spacing:0;color:var(--gold);text-decoration:none}
+.rs a.bx:hover{text-decoration:underline}
+.boxedit{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px;text-align:left}
+.boxedit input{padding:7px 8px;font-size:13px}
+.boxedit .wide{grid-column:1/-1}
+@media(max-width:600px){.rs .line,.rs a.bx{display:inline-block;margin-right:10px}}
+.reels{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:-10px 0 22px}
+.reels button{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;padding:0;text-align:left;color:var(--text)}
+.reels button.on{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.reels img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.reels span{display:block;padding:7px 9px;font-size:12px;font-weight:600;line-height:1.3}
+/* ads & sponsors */
+.adwrap{display:none;padding:18px 0}
+.adwrap.on{display:block}
+.adbox{max-width:970px;margin:0 auto;text-align:center}
+.adbox .tag{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.adbox a{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.adbox img{width:100%;display:block}
+.adbox.side{max-width:336px}
+#sponsors{background:var(--ink2);border-top:1px solid var(--line)}
+.spgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:24px}
+.sp{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-decoration:none;min-height:130px;text-align:center}
+.sp img{max-width:160px;max-height:70px;object-fit:contain}
+.sp .nm{font-weight:700}.sp .tr{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.sp.cta{border:1.5px dashed var(--gold);background:rgba(246,184,26,.06)}
+.sp.cta b{font-family:Anton;font-size:24px;font-weight:400;color:var(--gold);text-transform:uppercase}
+.sp.cta span{font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div class="bucketbar"><div class="wrap">🪣 Certified Bucket · Cam Dyer has scored 1,000+ college career points</div></div>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="badge">8</span><b>CAM DYER</b></a>
+    <div class="navlinks">
+      <a href="#thousand">1K Watch</a>
+      <a href="#journey">Journey</a>
+      <a href="#photos">Photos</a>
+      <a href="#vlogs">Vlogs</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#pro">Pro Profile</a>
+      <a href="#portugal">Portugal</a>
+    </div>
+    <a class="btn btn-gold btn-sm gfm" href="https://gofund.me/92f08a1c0" target="_blank" rel="noopener">Donate</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="seal-inline"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><path id="scb" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/><radialGradient id="sgb" cx="40%" cy="35%"><stop offset="0" stop-color="#ffe7a1"/><stop offset=".55" stop-color="#f6b81a"/><stop offset="1" stop-color="#a86f00"/></radialGradient></defs><g fill="url(#sgb)" stroke="#7a5200" stroke-width="2"><path d="M100 4l11 13 16-6 6 16 17 1-1 17 15 8-8 15 11 13-13 11 6 16-16 6-1 17-17-1-8 15-15-8-13 11-11-13-16 6-6-16-17-1 1-17-15-8 8-15-11-13 13-11-6-16 16-6 1-17 17 1 8-15 15 8z" transform="translate(0,0)"/></g><circle cx="100" cy="100" r="62" fill="#0b0f0d" stroke="#f6b81a" stroke-width="3"/><text font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="17" letter-spacing="3.2" fill="#0b0f0d"><textPath href="#scb" startOffset="0">CERTIFIED BUCKET ★ 1,000 POINTS ★</textPath></text><text x="100" y="98" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="46" fill="#f6b81a">1K</text><text x="100" y="124" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="15" letter-spacing="2" fill="#eef3f0">🪣 CLUB</text></svg><span>Certified Bucket · 1,000 Club</span></div>
+        <div class="eyebrow">Senior Season · 2026–27 · The Road to Pro</div>
+        <h1 class="display">Cam<span>Dyer</span></h1>
+        <div class="tagline">From Rochester at 15 → <em>Pro ball overseas</em></div>
+        <p class="lead">Follow Cam's senior year at SUNY Brockport — every gameday, every stop on the journey, and the summer trip to Portugal that kicks off his pro career.</p>
+        <div class="chips">
+          <span class="chip"><b>#8</b> · Guard / Forward</span>
+          <span class="chip"><b>6'5"</b></span>
+          <span class="chip">SUNY Brockport Golden Eagles</span>
+          <span class="chip">Empire 8 · NCAA D-III</span>
+        </div>
+        <div class="hero-ctas">
+          <a class="btn btn-gold" href="#vlogs">▶ Watch Gameday Vlogs</a>
+          <a class="btn btn-ghost" href="#portugal">Support the Journey</a>
+        </div>
+      </div>
+      <div class="jersey photo" id="heroCard">
+        <img id="heroImg" alt="Cam Dyer">
+        <div class="seal"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><path id="sca" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/><radialGradient id="sga" cx="40%" cy="35%"><stop offset="0" stop-color="#ffe7a1"/><stop offset=".55" stop-color="#f6b81a"/><stop offset="1" stop-color="#a86f00"/></radialGradient></defs><g fill="url(#sga)" stroke="#7a5200" stroke-width="2"><path d="M100 4l11 13 16-6 6 16 17 1-1 17 15 8-8 15 11 13-13 11 6 16-16 6-1 17-17-1-8 15-15-8-13 11-11-13-16 6-6-16-17-1 1-17-15-8 8-15-11-13 13-11-6-16 16-6 1-17 17 1 8-15 15 8z" transform="translate(0,0)"/></g><circle cx="100" cy="100" r="62" fill="#0b0f0d" stroke="#f6b81a" stroke-width="3"/><text font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="17" letter-spacing="3.2" fill="#0b0f0d"><textPath href="#sca" startOffset="0">CERTIFIED BUCKET ★ 1,000 POINTS ★</textPath></text><text x="100" y="98" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="46" fill="#f6b81a">1K</text><text x="100" y="124" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="15" letter-spacing="2" fill="#eef3f0">🪣 CLUB</text></svg></div>
+        <svg class="court" viewBox="0 0 400 500" fill="none" stroke="#fff" stroke-width="3">
+          <rect x="20" y="20" width="360" height="460"/>
+          <path d="M120 480 V300 H280 V480"/><circle cx="200" cy="300" r="60"/>
+          <path d="M50 480 V400 A150 150 0 0 1 350 400 V480"/>
+          <circle cx="200" cy="20" r="60"/>
+        </svg>
+        <div class="name">DYER</div>
+        <div class="num">8</div>
+        <div class="cap"><span>Brockport, NY</span><span>Class of '27</span></div>
+      </div>
+    </div>
+    <div class="statbar">
+      <div><div class="v">11.7</div><div class="l">PPG · 2025–26</div></div>
+      <div><div class="v" id="careerPts">955</div><div class="l">Career college pts</div></div>
+      <div><div class="v">3rd</div><div class="l">Team All-Empire 8</div></div>
+      <div><div class="v" id="ptDays">—</div><div class="l">Days to Portugal</div></div>
+    </div>
+  </div>
+</header>
+<div class="adwrap" data-slot="top"><div class="wrap"></div></div>
+
+
+<section id="thousand">
+  <div class="wrap">
+    <div class="eyebrow">College career · JUCO + NCAA</div>
+    <h2 class="display" id="kTitle">Road to 1,000</h2>
+    <p class="lead" id="kLead">Every bucket since his first college game at SUNY Niagara counts. When Cam hits 1,000 career points, he earns the Certified Bucket badge.</p>
+    <div class="k-grid">
+      <div class="ring reveal">
+        <svg viewBox="0 0 300 300"><defs><linearGradient id="kgrad" x1="0" x2="1"><stop offset="0" stop-color="#0a8a63"/><stop offset="1" stop-color="#f6b81a"/></linearGradient></defs><circle class="trk" cx="150" cy="150" r="128"/><circle class="arc" id="kArc" cx="150" cy="150" r="128" stroke-dasharray="804.25" stroke-dashoffset="804.25"/></svg>
+        <div class="ctr"><div><div class="togo" id="kToGo">—</div><div class="sub" id="kSub">points to go</div><div class="tot" id="kTot"></div></div></div>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">Career points by season</div>
+        <div class="kseg" id="kSeg"></div>
+        <div class="msg" style="display:flex;justify-content:space-between"><span>0</span><span>1,000</span></div>
+        <div class="klegend" id="kLegend"></div>
+        <div class="kproj" id="kProj"></div>
+        <p class="srcs" style="margin-top:12px">Stats: <a href="https://niagaracc.prestosports.com/sports/mbkb/2023-24/bios/dyer_cam_1xj8" target="_blank" rel="noopener">SUNY Niagara 2023–24</a> · <a href="https://njcaaregion3.org/sports/mbkb/2024-25/d2/teams/sunyniagara" target="_blank" rel="noopener">SUNY Niagara 2024–25</a> · <a href="https://gobrockport.com/sports/mens-basketball/stats/2025-26" target="_blank" rel="noopener">Brockport 2025–26</a> · <a href="https://gobrockport.com/sports/mens-basketball/stats/2026-27" target="_blank" rel="noopener">Brockport 2026–27</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="wrap">
+    <div class="eyebrow">Year by year</div>
+    <h2 class="display">The Journey</h2>
+    <p class="lead">Four generations, five cities, one goal. Tap a stop to see each chapter of Cam's run.</p>
+    <div class="route"><div class="stops" id="stops"></div></div>
+    <div class="chapter reveal" id="chapter"></div>
+    <div class="chart reveal">
+      <div>
+        <div class="eyebrow">Scoring climb</div>
+        <h3 class="display" style="font-size:40px;margin-top:6px">Points per game</h3>
+        <p class="msg" style="margin-top:8px">Season averages from official stat pages. Senior year fills in as the games are played.</p>
+      </div>
+      <div>
+        <div class="bars" id="bars"></div>
+        <div class="barlbls" id="barlbls"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="photos">
+  <div class="wrap">
+    <div class="eyebrow">Through the years</div>
+    <h2 class="display">Photo Wall</h2>
+    <p class="lead">From Uprep in Rochester to the Region III title at SUNY Niagara to the Golden Eagles. Tap any photo to see it big.</p>
+    <div class="filters" id="gfilters"></div>
+    <div class="gal" id="gal"></div>
+    <p class="credit">Photo credits: Eugene's Photography, SUNY Niagara &amp; SUNY Brockport athletics, and the Dyer family.</p>
+  </div>
+</section>
+<div class="lb" id="lb"><button class="closex" id="lbX" aria-label="Close">×</button><button class="nav prev" id="lbP" aria-label="Previous">‹</button><div><img id="lbImg" alt=""><div class="cap" id="lbCap"></div></div><button class="nav next" id="lbN" aria-label="Next">›</button></div>
+
+<section id="vlogs">
+  <div class="wrap">
+    <div class="vhead">
+      <div>
+        <div class="eyebrow">Behind the scenes</div>
+        <h2 class="display">Gameday Vlogs</h2>
+        <p class="lead">Pregame, locker room, bus rides and the final buzzer — Cam's senior season, one game at a time.</p>
+      </div>
+    </div>
+    <div id="ytwrap"></div>
+    <div class="filters" id="vfilters"></div>
+    <div class="vgrid" id="vgrid"></div>
+  </div>
+</section>
+
+<div class="adwrap" data-slot="mid"><div class="wrap"></div></div>
+<section id="schedule">
+  <div class="wrap">
+    <div class="eyebrow">2026–27 Golden Eagles</div>
+    <h2 class="display">Senior Season Schedule</h2>
+    <div class="nextgame reveal" id="nextgame"></div>
+    <div class="filters" id="sfilters"></div>
+    <div class="sched" id="sched"></div>
+    <p class="srcs" style="margin-top:14px">Schedule from <a href="https://gobrockport.com/sports/mens-basketball/schedule" target="_blank" rel="noopener">goBrockport.com</a>. Times are Eastern.</p>
+  </div>
+</section>
+
+
+<section id="pro">
+  <div class="wrap">
+    <div class="eyebrow">For scouts, agents &amp; pro clubs</div>
+    <h2 class="display">Pro Profile</h2>
+    <div class="pro-grid">
+      <div class="pro-card reveal">
+        <img class="pro-photo" id="proPhoto" alt="Cam Dyer">
+        <div class="pro-body">
+          <div class="pro-name">Camron “Cam” Dyer</div>
+          <dl class="facts">
+            <dt>Position</dt><dd>Guard / Forward</dd>
+            <dt>Height</dt><dd>6'5"</dd>
+            <dt>Hometown</dt><dd>Rochester, NY</dd>
+            <dt>Current</dt><dd>SUNY Brockport #8 · NCAA D-III · Empire 8</dd>
+            <dt>Available</dt><dd>June 2027 (graduating senior)</dd>
+            <dt>Career pts</dt><dd id="proPts">—</dd>
+          </dl>
+          <div id="proContact"></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow" id="reelTitle">Highlight reels</div>
+        <video class="reel" id="proReel" controls playsinline preload="metadata"></video>
+        <div class="reels" id="reels"></div>
+        <div class="eyebrow">Honors &amp; milestones</div>
+        <ul class="honors">
+          <li>🏅 Third Team All-Empire 8 (2025–26)</li>
+          <li>🏆 NJCAA Region III Div. II champions, SUNY Niagara (2025) — started all 34 games</li>
+          <li>🇺🇸 NJCAA Division II national tournament qualifier (2025)</li>
+          <li>📈 Starter on a nationally ranked team: SUNY Niagara, No. 13 in the NJCAA DII poll (2024–25)</li>
+          <li>🏀 Empire 8 Championship game, SUNY Brockport (2026)</li>
+          <li>🇵🇹 Selected to Eurobasket Tours Empire 8 team — vs. pro clubs in Portugal (June 2027)</li>
+        </ul>
+        <div class="eyebrow">College stats</div>
+        <table class="stats" id="proStats"></table>
+        <p class="srcs" style="margin-top:10px">Official stats: <a href="https://gobrockport.com/sports/mens-basketball/stats/2026-27" target="_blank" rel="noopener">SUNY Brockport</a> · <a href="https://njcaaregion3.org/sports/mbkb/2024-25/d2/teams/sunyniagara" target="_blank" rel="noopener">SUNY Niagara 2024–25</a> · <a href="https://niagaracc.prestosports.com/sports/mbkb/2023-24/bios/dyer_cam_1xj8" target="_blank" rel="noopener">SUNY Niagara 2023–24</a> · <a href="https://today.sunyniagara.edu/?p=1186" target="_blank" rel="noopener">2025 Region III title</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portugal">
+  <div class="wrap">
+    <div class="eyebrow">June 1–10, 2027 · Eurobasket Tours</div>
+    <h2 class="display">Next Stop: Portugal</h2>
+    <div class="pt-grid">
+      <div class="reveal">
+        <p class="lead">Cam was selected to the Eurobasket Tours Empire 8 team — a 10-player roster coached by Brockport head coach Joe Clarke — to play against professional clubs in Portugal. It's his first shot in front of European pro teams, and the launch point for his career after graduation.</p>
+        <div class="cities">
+          <div class="city"><div class="display">Lisbon</div><p>Games vs. Portuguese pro clubs in the capital.</p></div>
+          <div class="city"><div class="display">Porto</div><p>More pro competition up north — more film for scouts.</p></div>
+        </div>
+        <div class="eyebrow" style="margin-top:20px">Your donation covers</div>
+        <div class="covers">
+          <div><span>✈️</span>The Portugal trip</div>
+          <div><span>🏀</span>Pro tryouts &amp; camps</div>
+          <div><span>🎥</span>Game tape &amp; highlight film</div>
+          <div><span>🧳</span>Travel after graduation</div>
+        </div>
+        <div class="cd" id="ptCountdown" style="margin-top:26px"></div>
+      </div>
+      <aside class="donate reveal">
+        <div class="eyebrow">Help send Cam overseas</div>
+        <div class="goal" id="goalAmt">$6,000</div>
+        <div class="msg" id="raisedTxt">Goal for the trip, tryouts, tape &amp; travel</div>
+        <div class="prog" id="progWrap" style="display:none"><i id="prog"></i></div>
+        <div class="eyebrow" style="margin-top:14px">What each step unlocks</div>
+        <div class="miles" id="miles"></div>
+        <div class="amts">
+          <a class="gfm" href="https://gofund.me/92f08a1c0" target="_blank" rel="noopener">$25</a>
+          <a class="gfm" href="https://gofund.me/92f08a1c0" target="_blank" rel="noopener">$50</a>
+          <a class="gfm" href="https://gofund.me/92f08a1c0" target="_blank" rel="noopener">$100</a>
+          <a class="gfm" href="https://gofund.me/92f08a1c0" target="_blank" rel="noopener">Any</a>
+        </div>
+        <a class="btn btn-gold gfm" href="https://gofund.me/92f08a1c0" target="_blank" rel="noopener">Donate on GoFundMe →</a>
+        <div class="sharerow">
+          <button class="btn btn-ghost" id="copyGfm" style="flex:1;justify-content:center">Copy donation link</button>
+        </div>
+        <div class="msg" id="copyMsg" style="margin-top:8px"></div>
+        <p class="fine">Donations go straight through GoFundMe's secure checkout. Can't give? Sharing the link helps just as much.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+<section id="quotes" style="display:none">
+  <div class="wrap">
+    <div class="eyebrow">From the GoFundMe</div>
+    <h2 class="display">Words of Support</h2>
+    <div class="qgrid" id="qgrid"></div>
+  </div>
+</section>
+
+<div class="adwrap" data-slot="lower"><div class="wrap"></div></div>
+<section id="feedback">
+  <div class="wrap">
+    <div class="eyebrow">Hype wall</div>
+    <h2 class="display">Leave Cam a Message</h2>
+    <p class="lead">Thoughts on a vlog, a shout-out before a big game, or feedback on the channel — Cam reads every one, and his favorites go up on the wall.</p>
+    <div class="fb-grid">
+      <form class="form" id="fbForm" name="feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="feedback"><p hidden><label>Leave blank <input name="bot-field"></label></p><input type="hidden" name="react" id="fbReact" value="🔥">
+        <div><label for="fbName">Your name</label><input id="fbName" name="name" maxlength="60" placeholder="e.g. Coach Mike, Aunt Lisa"></div>
+        <div><label for="fbAbout">About</label>
+          <select id="fbAbout" name="about"><option>General</option><option>A gameday vlog</option><option>The Portugal trip</option><option>Website feedback</option></select></div>
+        <div><label>Vibe</label><div class="reacts" id="reacts">
+          <button type="button" data-r="🔥" class="on">🔥 Hype</button><button type="button" data-r="💪">💪 Keep going</button><button type="button" data-r="🙏">🙏 Proud</button><button type="button" data-r="💡">💡 Idea</button></div></div>
+        <div><label for="fbText">Message</label><textarea id="fbText" name="message" maxlength="1000" placeholder="Say something to Cam…"></textarea></div>
+        <button class="btn btn-gold" type="submit" style="justify-content:center">Post message</button>
+        <div class="msg" id="fbMsg"></div>
+      </form>
+      <div>
+        <div class="eyebrow" style="margin-bottom:10px">Shout-outs</div><div class="wall" id="wall"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sponsors">
+  <div class="wrap">
+    <div class="eyebrow">Partners</div>
+    <h2 class="display">Sponsors</h2>
+    <p class="lead">Local businesses backing Cam's road to pro ball. Every sponsor is shown here and in his weekly YouTube episodes.</p>
+    <div class="spgrid" id="spgrid"></div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="logo"><span class="badge">8</span><b>CAM DYER</b></div>
+    <div class="socials" id="socials"></div>
+    <form class="form" id="upForm" name="updates" method="POST" data-netlify="true" style="max-width:520px;margin:10px 0 6px;padding:18px">
+      <input type="hidden" name="form-name" value="updates">
+      <label for="upEmail">Get an email when Cam posts or hits 1,000</label>
+      <div style="display:flex;gap:8px"><input id="upEmail" name="email" type="email" required placeholder="you@email.com"><button class="btn btn-gold btn-sm" type="submit">Join</button></div>
+      <div class="msg" id="upMsg"></div>
+    </form>
+    <div class="sources">
+      Sources: <a href="https://gobrockport.com/sports/mens-basketball/schedule" target="_blank" rel="noopener">SUNY Brockport schedule</a> ·
+      <a href="https://gobrockport.com/news/2026/2/27/mens-basketball-no-5-brockport-hosts-no-7-keuka-for-empire-8-championship.aspx" target="_blank" rel="noopener">Brockport E8 Championship preview</a> ·
+      <a href="https://gobrockport.com/news/2026/2/26/mens-basketball-aybar-named-rookie-of-the-year-oka-and-dyer-earn-all-conference-honors.aspx" target="_blank" rel="noopener">All-Conference honors</a> ·
+      <a href="https://psblions.com/sports/mbkb/2025-26/releases/20251230w5hl8l" target="_blank" rel="noopener">Behrend game recap</a> ·
+      <a href="https://niagaracc.prestosports.com/sports/mbkb/2023-24/bios/dyer_cam_1xj8" target="_blank" rel="noopener">SUNY Niagara bio</a> ·
+      <a href="https://new.scoutbasketball.com/player/camron-dyer" target="_blank" rel="noopener">2025–26 averages</a> ·
+      <a href="https://sports.yahoo.com/dyers-monster-poster-brooks-27-230923730.html" target="_blank" rel="noopener">St. George Spectrum (Dixie)</a> ·
+      <a href="https://www.maxpreps.com/nv/las-vegas/red-rock-academy-regulators/basketball" target="_blank" rel="noopener">Red Rock Academy</a>
+    </div>
+  </div>
+</footer>
+
+<div class="fab"><a class="btn btn-gold gfm" href="https://gofund.me/92f08a1c0" target="_blank" rel="noopener">🏀 Donate to Cam's Journey</a></div>
+
+<div class="modal" id="modal"><button class="closex" data-mclose aria-label="Close">×</button><div><div id="mbody"></div><div class="mt" id="mtitle"></div></div></div>
+
+<script src="config.js"></script>
+<script>
+/* ---------- static data ---------- */
+const GFM_DEFAULT = "https://gofund.me/92f08a1c0";
+const SCHED = [
+ ["2026-11-14","SUNY Delhi","Delhi, NY","A","Final","W 80-67"],
+ ["2026-11-18","SUNY Canton","Canton, NY","A","Final","W 92-76"],
+ ["2026-11-21","Buffalo State","Buffalo, NY","A","2:00 PM"],
+ ["2026-11-24","Oswego State","Vlogianitis Gym","H","5:30 PM"],
+ ["2026-12-05","Cortland","Cortland, NY","A","4:00 PM"],
+ ["2026-12-08","St. Lawrence","Vlogianitis Gym","H","5:30 PM"],
+ ["2026-12-11","Penn State Behrend","Erie, PA","A","6:00 PM"],
+ ["2026-12-12","Hilbert College","Hamburg, NY","A","2:00 PM"],
+ ["2026-12-30","Ithaca College","Vlogianitis Gym","H","4:00 PM"],
+ ["2027-01-05","Utica University","Vlogianitis Gym","H","4:00 PM"],
+ ["2027-01-08","Alfred University","Alfred, NY","A","7:30 PM"],
+ ["2027-01-09","Houghton University","Vlogianitis Gym","H","4:00 PM"],
+ ["2027-01-12","SUNY Poly","Utica, NY","A","7:30 PM"],
+ ["2027-01-15","Nazareth University","Vlogianitis Gym","H","7:30 PM"],
+ ["2027-01-16","St. John Fisher","Vlogianitis Gym","H","4:00 PM"],
+ ["2027-01-22","Russell Sage","Troy, NY","A","7:30 PM"],
+ ["2027-01-23","Hartwick College","Oneonta, NY","A","4:00 PM"],
+ ["2027-01-26","SUNY Geneseo","Geneseo, NY","A","7:30 PM"],
+ ["2027-01-29","St. John Fisher","Rochester, NY","A","7:30 PM"],
+ ["2027-01-30","Nazareth University","Rochester, NY","A","4:00 PM"],
+ ["2027-02-05","Hartwick College","Vlogianitis Gym","H","7:30 PM"],
+ ["2027-02-06","Russell Sage","Vlogianitis Gym","H","4:00 PM"],
+ ["2027-02-12","Keuka College","Vlogianitis Gym","H","7:30 PM"],
+ ["2027-02-13","Elmira College","Elmira, NY","A","4:00 PM"],
+ ["2027-02-16","SUNY Geneseo","Vlogianitis Gym","H","7:30 PM"],
+ ["2027-02-20","Empire 8 Tournament","TBA","T","TBA"],
+ ["2027-02-24","Empire 8 Tournament","TBA","T","TBA"],
+ ["2027-02-27","Empire 8 Championship","TBA","T","TBA"]
+].map((g,i)=>({id:"g"+String(i+1).padStart(2,"0"),date:g[0],opp:g[1],loc:g[2],ha:g[3],time:g[4],result:g[5]||""}));
+
+const CHAPTERS = [
+ {yr:"Age 15",pl:"Rochester, NY",team:"Uprep",loc:"Rochester, New York",big:"15",
+  h:"Where it started",
+  p:"Cam didn't pick up a basketball seriously until he was 15. Back home in Rochester at University Prep, he went from late starter to the kid who never left the gym.",
+  li:["Started organized basketball at 15","Hometown roots: Rochester, NY"]},
+ {yr:"AAU",pl:"Las Vegas, NV",team:"Vegas Elite",loc:"Las Vegas, Nevada · AAU",big:"LV",
+  h:"Proving ground",
+  p:"Summer ball in Las Vegas — the AAU capital of the country — against some of the best young talent in the West.",
+  li:["Vegas Elite AAU program","Grassroots circuit in Las Vegas"]},
+ {yr:"High school",pl:"St. George, UT",team:"Dixie Flyers",loc:"Dixie High School · St. George, Utah",big:"UT",
+  h:"Making a name in Utah",
+  p:"At Dixie High, Cam became a highlight-reel athlete. The St. George Spectrum ran a headline about his monster poster dunk sparking a win over Green Canyon.",
+  li:["Dixie High School Flyers, Region 10","Headline: “Dyer's monster poster” vs. Green Canyon"],
+  src:[["St. George Spectrum","https://sports.yahoo.com/dyers-monster-poster-brooks-27-230923730.html"]]},
+ {yr:"Post-grad",pl:"Las Vegas, NV",team:"Red Rock Academy",loc:"Post-grad prep · Las Vegas, Nevada",big:"RR",
+  h:"Extra year, extra work",
+  p:"Cam took a post-grad year at Red Rock Academy in Las Vegas, a national prep program, to sharpen his game and get in front of college coaches.",
+  li:["Red Rock Academy Regulators","Post-grad prep season in Las Vegas"],
+  src:[["MaxPreps","https://www.maxpreps.com/nv/las-vegas/red-rock-academy-regulators/basketball"]]},
+ {yr:"2023–25",pl:"Sanborn, NY",team:"SUNY Niagara",loc:"Niagara County CC · Sanborn, New York",big:"15",
+  h:"Two years of JUCO grind",
+  p:"Back in Western New York, Cam wore #15 at SUNY Niagara and earned a starting role as a freshman.",
+  stats:[["65","Games"],["57","Starts"],["598","Points"],["9.2","PPG"]],statnote:"Two seasons combined",
+  li:["2023–24 (#15): 31 games, 23 starts, 8.0 PPG, 4.5 RPG","2024–25 (#8): started all 34 games, 10.3 PPG, 5.0 RPG on a 26–8 team"],
+  src:[["2023–24 bio","https://niagaracc.prestosports.com/sports/mbkb/2023-24/bios/dyer_cam_1xj8"],["2024–25 stats","https://njcaaregion3.org/sports/mbkb/2024-25/d2/teams/sunyniagara"]]},
+ {yr:"2025–26",pl:"Brockport, NY",team:"Golden Eagles",loc:"SUNY Brockport · Junior season",big:"8",
+  h:"Breakout in the Empire 8",
+  p:"In his first year at Brockport, Cam became the team's do-it-all wing — second on the team in scoring, rebounding and assists, and a defensive anchor on a squad that rode a nine-game win streak into the Empire 8 title game.",
+  stats:[["11.7","PPG"],["5.0","RPG"],["2.1","APG"],["28","Games"]],statnote:"2025–26 junior season",
+  li:["Third Team All-Empire 8","Hit the go-ahead three to beat Penn State Behrend 61-60 in the home opener","13 points in the Empire 8 semifinal win over St. John Fisher, 74-57"],
+  src:[["All-Conference","https://gobrockport.com/news/2026/2/26/mens-basketball-aybar-named-rookie-of-the-year-oka-and-dyer-earn-all-conference-honors.aspx"],["E8 preview","https://gobrockport.com/news/2026/2/27/mens-basketball-no-5-brockport-hosts-no-7-keuka-for-empire-8-championship.aspx"],["Behrend recap","https://psblions.com/sports/mbkb/2025-26/releases/20251230w5hl8l"],["Averages","https://new.scoutbasketball.com/player/camron-dyer"]]},
+ {yr:"2026–27",pl:"Brockport, NY",team:"Senior Year",loc:"SUNY Brockport · Senior season",big:"SR",now:true,
+  h:"The last ride",
+  p:"Senior season is on — and Cam is documenting every game in his gameday vlogs. Brockport opened 2–0 with road wins at SUNY Delhi (80-67) and SUNY Canton (92-76), with Cam averaging 14.5 points.",
+  li:["Gameday vlogs every game","28-game schedule incl. Empire 8 tournament"],cta:["▶ Watch the vlogs","#vlogs"]},
+ {yr:"June 2027",pl:"Portugal",team:"Eurobasket",loc:"Lisbon & Porto · Portugal",big:"PT",future:true,
+  h:"Going pro",
+  p:"Selected for the Eurobasket Tours Empire 8 team, Cam heads to Portugal June 1–10 to face professional clubs — the first step toward playing pro overseas.",
+  li:["10-player roster coached by Joe Clarke","Games vs. pro clubs in Lisbon and Porto"],cta:["Support the trip","#portugal"]}
+];
+
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const el=(t,c,txt)=>{const e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e};
+const fmtDate=d=>new Date(d+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"});
+const dow=d=>new Date(d+"T12:00:00").toLocaleDateString("en-US",{weekday:"short"});
+const safeUrl=u=>{try{const x=new URL(u);return /^https?:$/.test(x.protocol)?x.href:null}catch(e){return null}};
+function gameStart(g){const m=/(\d+):(\d+)\s*(AM|PM)/.exec(g.time||"");let h=19,mi=0;if(m){h=+m[1]%12+(m[3]==="PM"?12:0);mi=+m[2]}const d=new Date(g.date+"T00:00:00");d.setHours(h,mi);return d}
+function srcName(u){u=u||"";return /instagram/.test(u)?"Instagram":/facebook|fb\.watch/.test(u)?"Facebook":/youtu/.test(u)?"YouTube":/tiktok/.test(u)?"TikTok":"Link"}
+
+
+/* ---------- state from config.js ---------- */
+const CFG=window.SITE||{};
+const state={vfilter:"all",sfilter:"all"};
+const gfm=()=>safeUrl(CFG.gofundme)||GFM_DEFAULT;
+const ytId=v=>(String(v||"").match(/^[A-Za-z0-9_-]{6,20}$/)||[])[0];
+function games(){const r=CFG.results||{};return SCHED.map(g=>({...g,result:(r[g.id]||g.result||"")}))}
+const VLOGS=(CFG.vlogs||[]).map((v,i)=>({...v,gameId:v.game||null,id:"v"+i}));
+
+/* ---------- journey ---------- */
+let chIdx=CHAPTERS.findIndex(c=>c.now);
+function renderStops(){
+  const wrap=$("#stops");wrap.innerHTML="";
+  CHAPTERS.forEach((c,i)=>{
+    const b=el("button","stop"+(i<chIdx?" done":"")+(i===chIdx?" active":"")+(c.future?" future":""));
+    b.append(el("div","dot"),el("div","yr",c.yr),el("div","pl",c.pl));
+    b.onclick=()=>{chIdx=i;renderStops();renderChapter()};
+    wrap.append(b);
+  });
+  const a=wrap.children[chIdx];if(a)wrap.scrollTo({left:a.offsetLeft-wrap.clientWidth/2+a.clientWidth/2,behavior:"smooth"});
+}
+function renderChapter(){
+  const c=CHAPTERS[chIdx],box=$("#chapter");box.innerHTML="";
+  const art=el("div","art"+(c.img?" hasimg":""));if(c.img){art.style.backgroundImage="url('"+P(c.img)+"')";if(c.fit){art.style.backgroundSize=c.fit;art.style.backgroundRepeat="no-repeat";art.style.backgroundPosition="center 12%";art.style.backgroundColor="#0b0f0d"}}art.append(el("div","big",c.big),el("div","eyebrow",c.yr),el("div","team",c.team),el("div","loc",c.loc));
+  const body=el("div","body");body.append(el("h3",null,c.h),el("p",null,c.p));
+  if(c.stats){const m=el("div","mini");c.stats.forEach(s=>{const d=el("div");d.append(el("div","v",s[0]),el("div","l",s[1]));m.append(d)});body.append(el("div","eyebrow",c.statnote),m)}
+  if(c.li){const u=el("ul");c.li.forEach(t=>u.append(el("li",null,t)));body.append(u)}
+  if(c.src){const s=el("div","srcs");s.append("Source: ");c.src.forEach((x,i)=>{const a=el("a",null,x[0]);a.href=x[1];a.target="_blank";a.rel="noopener";s.append(a);if(i<c.src.length-1)s.append(" · ")});body.append(s)}
+  const nav=el("div","chnav");
+  const pv=el("button","btn btn-ghost btn-sm","← Prev");pv.disabled=chIdx===0;pv.style.opacity=chIdx===0?.4:1;pv.onclick=()=>{if(chIdx>0){chIdx--;renderStops();renderChapter()}};
+  const nx=el("button","btn btn-ghost btn-sm","Next →");nx.disabled=chIdx===CHAPTERS.length-1;nx.style.opacity=nx.disabled?.4:1;nx.onclick=()=>{if(chIdx<CHAPTERS.length-1){chIdx++;renderStops();renderChapter()}};
+  nav.append(pv,nx);
+  if(c.cta){const a=el("a","btn btn-gold btn-sm",c.cta[0]);a.href=c.cta[1];nav.append(a)}
+  body.append(nav);box.append(art,body);
+}
+function renderBars(){
+  const b=$("#bars"),l=$("#barlbls");b.innerHTML="";l.innerHTML="";
+  [["8.0",8,"Niagara '23–24"],["10.3",10.3,"Niagara '24–25"],["11.7",11.7,"Brockport '25–26"],["14.5",14.5,"'26–27 so far"]].forEach(([n,v,lab])=>{
+    const bar=el("div","bar"),col=el("div","col"+(v==null?" tbd":""));bar.append(el("div","n",n),col);b.append(bar);l.append(el("div",null,lab));
+    requestAnimationFrame(()=>setTimeout(()=>col.style.height=(v==null?55:v/14*100)+"%",200));
+  });
+}
+
+
+/* ---------- vlogs ---------- */
+function vlogList(){
+  const gs=games(),now=new Date(),out=[],by={};
+  VLOGS.forEach(v=>{(by[v.gameId||"_"]=by[v.gameId||"_"]||[]).push(v)});
+  gs.forEach(g=>{if(by[g.id])by[g.id].forEach(v=>out.push({...v,game:g}));else if(gameStart(g)<now)out.push({placeholder:true,game:g,id:"ph-"+g.id})});
+  (by["_"]||[]).forEach(v=>out.push({...v,game:null}));
+  return out.sort((a,b)=>((b.game&&b.game.date)||"").localeCompare((a.game&&a.game.date)||""));
+}
+function renderYouTube(){
+  const w=$("#ytwrap");w.innerHTML="";const id=String(CFG.youtubeChannelId||"").trim();
+  if(!/^UC[A-Za-z0-9_-]{20,}$/.test(id))return;
+  const box=el("div","ytbox"),fr=el("div","ytframe"),ifr=document.createElement("iframe");
+  ifr.src="https://www.youtube.com/embed/videoseries?list=UU"+id.slice(2);ifr.title="Cam Dyer on YouTube";ifr.allow="accelerometer; encrypted-media; picture-in-picture; fullscreen";ifr.loading="lazy";
+  fr.append(ifr);const t=el("div");t.append(el("div","eyebrow","Latest on YouTube"),el("h3","display","Full episodes"));t.querySelector("h3").style.fontSize="40px";
+  t.append(el("p","msg","Weekly “Road to Overseas” episodes and every gameday Short. Subscribe so you never miss one."));
+  const a=el("a","btn btn-gold","▶ Subscribe on YouTube");a.href="https://www.youtube.com/channel/"+id+"?sub_confirmation=1";a.target="_blank";a.rel="noopener";a.style.marginTop="14px";t.append(a);
+  box.append(fr,t);w.append(box);
+}
+function renderVlogs(){
+  const list=vlogList(),f=$("#vfilters");f.innerHTML="";
+  [["all","All"],["W","Wins"],["L","Losses"],["H","Home"],["A","Road"]].forEach(([k,t])=>{const b=el("button","fbtn"+(state.vfilter===k?" on":""),t);b.onclick=()=>{state.vfilter=k;renderVlogs()};f.append(b)});
+  const grid=$("#vgrid");grid.innerHTML="";
+  const shown=list.filter(v=>{const g=v.game;if(state.vfilter==="all")return true;if(!g)return false;if(state.vfilter==="H"||state.vfilter==="A")return g.ha===state.vfilter;return (g.result||"")[0]===state.vfilter});
+  if(!shown.length){grid.append(el("div","empty","No vlogs here yet — check back after the next game."));return}
+  const no=id=>SCHED.findIndex(x=>x.id===id)+1;
+  shown.forEach(v=>{
+    const g=v.game,card=el("article","vcard"),th=el("button","thumb");th.type="button";
+    if(g){th.append(el("div","opp",g.opp),el("div","ep","GAME "+String(no(g.id)).padStart(2,"0")))}
+    if(g&&g.result)th.append(el("div","res "+g.result[0],g.result));
+    const yt=ytId(v.youtube),playable=!v.placeholder&&(v.file||yt);
+    if(v.placeholder){th.append(el("div","soon","🎬 Vlog dropping soon"));th.style.cursor="default"}
+    else{const im=document.createElement("img");im.alt="";im.loading="lazy";im.src=v.poster||(yt?"https://i.ytimg.com/vi/"+yt+"/hqdefault.jpg":"");if(im.src)th.prepend(im);if(playable){th.append(el("div","play"));th.onclick=()=>openModal(v)}}
+    const info=el("div","vinfo");
+    info.append(el("div","meta",g?fmtDate(g.date)+" · "+(g.ha==="H"?"vs ":g.ha==="A"?"at ":"")+g.opp:"Bonus"));
+    info.append(el("h4",null,v.placeholder?"Gameday Vlog: "+(g.ha==="H"?"vs ":"at ")+g.opp:(v.title||"Gameday Vlog")));
+    info.append(el("p",null,v.caption||(v.placeholder?"Cam's vlog from this one is on the way.":"")));
+    if(playable){const acts=el("div","acts"),b=el("button","btn btn-gold btn-sm","▶ Play");b.onclick=()=>openModal(v);acts.append(b);info.append(acts)}
+    card.append(th,info);grid.append(card);
+  });
+}
+function openModal(v){
+  const b=$("#mbody");b.innerHTML="";const yt=ytId(v.youtube);
+  if(yt){const f=document.createElement("iframe");f.src="https://www.youtube.com/embed/"+yt+"?autoplay=1&rel=0";f.allow="autoplay; encrypted-media; fullscreen";b.append(f)}
+  else{const vd=document.createElement("video");vd.src=v.file;vd.controls=true;vd.playsInline=true;if(v.poster)vd.poster=v.poster;b.append(vd);vd.play().catch(()=>{})}
+  $("#mtitle").textContent=v.title||"";$("#modal").classList.add("open");
+}
+function closeModal(){$("#mbody").innerHTML="";$("#modal").classList.remove("open")}
+$("[data-mclose]").onclick=closeModal;$("#modal").onclick=e=>{if(e.target.id==="modal")closeModal()};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+
+/* ---------- schedule ---------- */
+function renderSchedule(){
+  const gs=games(),now=new Date(),next=gs.find(g=>gameStart(g)>now);
+  let w=0,l=0,hw=0,hl=0,aw=0,al=0;gs.forEach(g=>{const r=(g.result||"")[0];if(r==="W"){w++;g.ha==="H"?hw++:aw++}if(r==="L"){l++;g.ha==="H"?hl++:al++}});
+  const ng=$("#nextgame");ng.innerHTML="";const L=el("div","l"),R=el("div","r");
+  if(next){L.append(el("div","eyebrow","Next up · "+dow(next.date)+" "+fmtDate(next.date)+" · "+next.time),el("div","opp",(next.ha==="H"?"vs ":next.ha==="A"?"at ":"")+next.opp),el("div","cond",next.loc+(next.ha==="H"?" · Home":"")));const cd=el("div","cd");cd.id="gameCd";R.append(el("div","eyebrow","Tip-off in"),cd)}
+  else L.append(el("div","eyebrow","Season complete"),el("div","opp","Thank you, Brockport"));
+  const rec=el("div","record");[[w+"-"+l,"Overall"],[hw+"-"+hl,"Home"],[aw+"-"+al,"Road"]].forEach(([a,b])=>{const s=el("span");s.append(el("b",null,a),b);rec.append(s)});L.append(rec);ng.append(L,R);
+  const f=$("#sfilters");f.innerHTML="";
+  [["all","All games"],["up","Upcoming"],["done","Results"],["H","Home"],["A","Road"]].forEach(([k,t])=>{const b=el("button","fbtn"+(state.sfilter===k?" on":""),t);b.onclick=()=>{state.sfilter=k;renderSchedule()};f.append(b)});
+  const s=$("#sched");s.innerHTML="";const vg=new Set(VLOGS.map(v=>v.gameId));
+  gs.filter(g=>{const p=gameStart(g)<now;return state.sfilter==="all"||(state.sfilter==="up"&&!p)||(state.sfilter==="done"&&p)||g.ha===state.sfilter}).forEach(g=>{
+    const p=gameStart(g)<now,row=el("div","game"+(p?" past":"")+(next&&g.id===next.id?" next":""));
+    const d=el("div","d",fmtDate(g.date));d.append(el("small",null,dow(g.date)));
+    const ha=el("div","ha "+g.ha,g.ha==="H"?"HOME":g.ha==="A"?"AWAY":"E8 TOURN");
+    const o=el("div","o",(g.ha==="H"?"vs ":g.ha==="A"?"at ":"")+g.opp);if(vg.has(g.id)){const a=el("a","vtag","VLOG");a.href="#vlogs";o.append(a)}o.append(el("small",null,g.loc));
+    const rs=el("div","rs");if(g.result)rs.append(el("span",g.result[0],g.result));else rs.append(el("span","t",p?"Final":g.time));
+    addBox(rs,g,p);row.append(d,ha,o,rs);s.append(row);
+  });
+  tick();
+}
+
+
+/* ---------- road to 1,000 ---------- */
+const CAREER=[
+ {lab:"SUNY Niagara '23–24",gp:31,pts:248,c:"#2f6f5a"},
+ {lab:"SUNY Niagara '24–25",gp:34,pts:350,c:"#0a8a63"},
+ {lab:"Brockport '25–26",gp:28,pts:328,c:"#c98c00"}
+];
+const SENIOR_DEFAULT={gp:2,pts:29};
+function renderThousand(sr){
+  sr=pickSenior(sr);const seasons=CAREER.concat([{lab:"Brockport '26–27",gp:sr.gp,pts:sr.pts,c:"#f6b81a",now:true}]);
+  const total=seasons.reduce((a,s)=>a+s.pts,0),togo=Math.max(0,1000-total),done=total>=1000;
+  document.body.classList.toggle("bucket",done||location.hash==="#bucket-preview");
+  $("#kToGo").textContent=done?total.toLocaleString():togo;
+  $("#kSub").textContent=done?"career points":"points to go";
+  $("#kTot").textContent=done?"🪣 Certified Bucket":total.toLocaleString()+" / 1,000";
+  $("#kTitle").textContent=done?"1,000 Point Club":"Road to 1,000";
+  if(done)$("#kLead").textContent="Cam crossed 1,000 career college points — officially a Certified Bucket.";
+  const arc=$("#kArc");setTimeout(()=>arc.style.strokeDashoffset=804.25*(1-Math.min(1,total/1000)),250);
+  const seg=$("#kSeg");seg.innerHTML="";seasons.forEach(s=>{const d=el("div",null,s.pts>=70?String(s.pts):"");d.style.background=s.c;seg.append(d);setTimeout(()=>d.style.width=(s.pts/Math.max(1000,total)*100)+"%",250)});
+  const lg=$("#kLegend");lg.innerHTML="";seasons.forEach(s=>{const d=el("div"),t=el("div","l");const i=el("i");i.style.background=s.c;t.append(i,s.lab);d.append(t,el("div","v",String(s.pts)),el("div","l",s.gp+" games · "+(s.gp?(s.pts/s.gp).toFixed(1):"0.0")+" PPG"));lg.append(d)});
+  const pj=$("#kProj");pj.innerHTML="";
+  const tile=$("#careerPts");if(tile)tile.textContent=total.toLocaleString();
+  if(done){pj.append(el("b",null,"🪣 Milestone reached"),el("span",null,"1,000+ career points across SUNY Niagara and SUNY Brockport."));return}
+  const ppg=sr.gp?sr.pts/sr.gp:328/28,need=Math.ceil(togo/ppg),now=new Date();
+  const upcoming=games().filter(g=>gameStart(g)>now&&!/Tournament|Championship/.test(g.opp));
+  const g=upcoming[need-1];
+  pj.append(el("b",null,"~"+need+" game"+(need>1?"s":"")),el("span",null,"at his senior pace of "+ppg.toFixed(1)+" PPG"+(g?" — projected milestone: "+fmtDate(g.date)+" "+(g.ha==="H"?"vs ":"at ")+g.opp+(g.ha==="H"?" (home!)":""):"")));
+}
+
+
+/* ---------- photos & media (v3) ---------- */
+const PHMAP={"brockport-mediaday-ball.jpg": "photos/brockport-mediaday-ball.jpg", "brockport-smile.jpg": "photos/brockport-smile.jpg", "brockport-dunk.jpg": "photos/brockport-dunk.jpg", "brockport-drive-fisher.jpg": "photos/brockport-drive-fisher.jpg", "brockport-layup.jpg": "photos/brockport-layup.jpg", "brockport-handle.jpg": "photos/brockport-handle.jpg", "brockport-push.jpg": "photos/brockport-push.jpg", "brockport-mediaday-seated.jpg": "photos/brockport-mediaday-seated.jpg", "niagara-8-medal.jpg": "photos/niagara-8-medal.jpg", "niagara-8-champs.jpg": "photos/niagara-8-champs.jpg", "niagara-8-trophy.jpg": "photos/niagara-8-trophy.jpg", "niagara-8-drive.jpg": "photos/niagara-8-drive.jpg", "niagara-8-handle.jpg": "photos/niagara-8-handle.jpg", "niagara-8-push.jpg": "photos/niagara-8-push.jpg", "niagara-8-shades.jpg": "photos/niagara-8-shades.jpg", "niagara-8-mediaday.jpg": "photos/niagara-8-mediaday.jpg", "niagara-8-headshot.jpg": "photos/niagara-8-headshot.jpg", "niagara-15-dunk.jpg": "photos/niagara-15-dunk.jpg", "niagara-15-postgame.jpg": "photos/niagara-15-postgame.jpg", "niagara-15-headshot.jpg": "photos/niagara-15-headshot.jpg", "uprep-2021.jpg": "photos/uprep-2021.jpg", "summer-dunk.jpg": "photos/summer-dunk.jpg", "highlight-niagara.mp4": "photos/highlight-niagara.mp4", "highlight-niagara-poster.jpg": "photos/highlight-niagara-poster.jpg"};
+function P(f){return PHMAP[f]||f}
+const HERO_PHOTO="brockport-mediaday-ball.jpg";
+[["uprep-2021.jpg",0],["niagara-15-dunk.jpg",4],["brockport-layup.jpg",5],["brockport-mediaday-seated.jpg",6]].forEach(([f,i])=>{if(CHAPTERS[i])CHAPTERS[i].img=f});
+PHMAP["legacy-four-generations.jpg"]="photos/legacy-four-generations.jpg";
+CHAPTERS.unshift({yr:"Legacy",pl:"Four generations",team:"Family Legacy",loc:"The Dyer family",big:"4",img:"legacy-four-generations.jpg",fit:"contain",
+  h:"Athletes. Veterans. Pros.",
+  p:"Cam comes from a line of athletes and servicemen. His great-grandfather and grandfather both served in the military, and his grandfather went on to play professional basketball in Germany for more than a decade. His father played Division I football and pro Arena Football. Now Cam, the fourth generation, is following his grandfather's path overseas.",
+  li:["Great-grandfather — military veteran","Grandfather — military veteran · pro basketball in Germany for 10+ years","Father — Division I football · pro Arena Football","Cam — fourth generation, headed overseas"]});
+chIdx++;
+const ERAS=[["all","All"],["legacy","Family"],["uprep","Early years"],["niagara","SUNY Niagara"],["brockport","Brockport"],["summer","Summer"]];
+const PHOTOS=[
+ ["legacy-four-generations.jpg","legacy","Four generations: great-grandfather, grandfather, father & Cam"],
+ ["brockport-mediaday-ball.jpg","brockport","Brockport media day"],
+ ["brockport-smile.jpg","brockport","Golden Eagles #8"],
+ ["brockport-dunk.jpg","brockport","Brockport · flush"],
+ ["brockport-drive-fisher.jpg","brockport","Driving on St. John Fisher"],
+ ["brockport-layup.jpg","brockport","Finishing through contact"],
+ ["brockport-handle.jpg","brockport","Running the floor"],
+ ["brockport-push.jpg","brockport","Brockport · transition"],
+ ["brockport-mediaday-seated.jpg","brockport","Brockport media day"],
+ ["niagara-8-medal.jpg","niagara","Region III champions · 2025"],
+ ["niagara-8-champs.jpg","niagara","Title game, 71–70 · 2025"],
+ ["niagara-8-trophy.jpg","niagara","Cutting down the nets · 2025"],
+ ["niagara-8-drive.jpg","niagara","SUNY Niagara #8 · 2024–25"],
+ ["niagara-8-handle.jpg","niagara","SUNY Niagara · 2024–25"],
+ ["niagara-8-push.jpg","niagara","SUNY Niagara · 2024–25"],
+ ["niagara-8-shades.jpg","niagara","Media day vibes · 2024–25"],
+ ["niagara-8-mediaday.jpg","niagara","Thunderwolves media day"],
+ ["niagara-8-headshot.jpg","niagara","Sophomore · #8"],
+ ["niagara-15-dunk.jpg","niagara","Freshman flush · #15"],
+ ["niagara-15-postgame.jpg","niagara","Postgame · 2023–24"],
+ ["niagara-15-headshot.jpg","niagara","Freshman · #15 · 2023–24"],
+ ["uprep-2021.jpg","uprep","Uprep #10 · 2021"],
+ ["summer-dunk.jpg","summer","Summer run"]
+].map(([f,era,cap])=>({src:P(f),era,cap}));
+Object.assign(PHMAP,{"brockport-doitall.jpg": "photos/brockport-doitall.jpg", "brockport-dunk-fisher-air.jpg": "photos/brockport-dunk-fisher-air.jpg", "brockport-rim-hang.jpg": "photos/brockport-rim-hang.jpg", "brockport-dunk-fisher.jpg": "photos/brockport-dunk-fisher.jpg", "brockport-longsleeve.jpg": "photos/brockport-longsleeve.jpg", "niagara-8-dunk-dark.jpg": "photos/niagara-8-dunk-dark.jpg", "brockport-starters.jpg": "photos/brockport-starters.jpg", "brockport-mediaday-trio.jpg": "photos/brockport-mediaday-trio.jpg", "brockport-mediaday-shot.jpg": "photos/brockport-mediaday-shot.jpg", "brockport-mediaday-wall.jpg": "photos/brockport-mediaday-wall.jpg", "early-days.jpg": "photos/early-days.jpg", "niagara-8-net.jpg": "photos/niagara-8-net.jpg", "niagara-8-ranked.jpg": "photos/niagara-8-ranked.jpg", "niagara-8-dunk-lakers.jpg": "photos/niagara-8-dunk-lakers.jpg", "reel-behrend-opener.mp4": "photos/reel-behrend-opener.mp4", "reel-niagara-ranked-win.mp4": "photos/reel-niagara-ranked-win.mp4", "reel-niagara-at-erie.mp4": "photos/reel-niagara-at-erie.mp4", "reel-ithaca-2nd-half.mp4": "photos/reel-ithaca-2nd-half.mp4", "reel-ithaca-1st-half.mp4": "photos/reel-ithaca-1st-half.mp4", "reel-behrend-opener-poster.jpg": "photos/reel-behrend-opener-poster.jpg", "reel-niagara-ranked-win-poster.jpg": "photos/reel-niagara-ranked-win-poster.jpg", "reel-niagara-at-erie-poster.jpg": "photos/reel-niagara-at-erie-poster.jpg", "reel-ithaca-2nd-half-poster.jpg": "photos/reel-ithaca-2nd-half-poster.jpg", "reel-ithaca-1st-half-poster.jpg": "photos/reel-ithaca-1st-half-poster.jpg"});
+[
+ ["brockport-dunk-fisher.jpg","brockport","Slam vs. St. John Fisher"],
+ ["brockport-dunk-fisher-air.jpg","brockport","Flush over Fisher"],
+ ["brockport-rim-hang.jpg","brockport","Hanging on the rim"],
+ ["brockport-doitall.jpg","brockport","“Do-it-all” 6'5\" guard"],
+ ["brockport-longsleeve.jpg","brockport","Golden Eagles #8"],
+ ["brockport-mediaday-trio.jpg","brockport","Brockport media day"],
+ ["brockport-mediaday-shot.jpg","brockport","Brockport media day"],
+ ["brockport-mediaday-wall.jpg","brockport","For the family"],
+ ["brockport-starters.jpg","brockport","The squad · Brockport"]
+].reverse().forEach(([f,era,cap])=>PHOTOS.unshift({src:P(f),era,cap}));
+[
+ ["niagara-8-net.jpg","niagara","Cutting down the nets · 2025"],
+ ["niagara-8-ranked.jpg","niagara","NJCAA DII No. 13 · 2024–25"],
+ ["niagara-8-dunk-lakers.jpg","niagara","On the road at Lakeland · photo @trcam_"],
+ ["niagara-8-dunk-dark.jpg","niagara","SUNY Niagara flush · photo @alyssa_dior04"],
+ ["early-days.jpg","uprep","Early days"]
+].forEach(([f,era,cap])=>PHOTOS.push({src:P(f),era,cap}));
+const REELS=[
+ ["reel-behrend-opener","Home opener vs. Penn State Behrend · Brockport"],
+ ["reel-ithaca-2nd-half","At Ithaca, 2nd half · Brockport"],
+ ["reel-ithaca-1st-half","At Ithaca, 1st half · Brockport"],
+ ["reel-niagara-ranked-win","No. 13 SUNY Niagara top-20 win · 2024–25"],
+ ["highlight-niagara","SUNY Niagara highlights · 2024–25"],
+ ["reel-niagara-at-erie","SUNY Niagara at Erie CC"]
+];
+let reelIdx=0;
+function renderReels(){
+  const v=$("#proReel"),r=REELS[reelIdx],b=$("#reels");if(!v||!b)return;
+  const src=P(r[0]+".mp4");if(v.getAttribute("src")!==src){v.src=src;v.poster=P(r[0]+"-poster.jpg")}
+  $("#reelTitle").textContent="Highlight reels · "+r[1];
+  b.innerHTML="";REELS.forEach((x,i)=>{const bt=el("button",i===reelIdx?"on":null),im=document.createElement("img");im.src=P(x[0]+"-poster.jpg");im.alt="";im.loading="lazy";bt.append(im,el("span",null,x[1]));bt.onclick=()=>{reelIdx=i;renderReels();v.play().catch(()=>{})};b.append(bt)});
+}
+let gEra="all",gList=[],gIdx=0;
+function extraPhotos(){return (CFG.photos||[]).filter(p=>p&&p.file).map(p=>({src:p.file,era:p.era||"brockport",cap:p.caption||""}))}
+function renderGallery(){
+  const f=$("#gfilters");f.innerHTML="";
+  ERAS.forEach(([k,t])=>{const b=el("button","fbtn"+(gEra===k?" on":""),t);b.onclick=()=>{gEra=k;renderGallery()};f.append(b)});
+  gList=extraPhotos().concat(PHOTOS).filter(p=>gEra==="all"||p.era===gEra);
+  const g=$("#gal");g.innerHTML="";
+  gList.forEach((p,i)=>{const fig=el("figure"),im=document.createElement("img");im.src=p.src;im.alt=p.cap||"Cam Dyer";im.loading="lazy";fig.append(im);if(p.cap)fig.append(el("figcaption",null,p.cap));fig.onclick=()=>openLb(i);g.append(fig)});
+}
+function openLb(i){gIdx=(i+gList.length)%gList.length;const p=gList[gIdx];$("#lbImg").src=p.src;$("#lbCap").textContent=p.cap||"";$("#lb").classList.add("open")}
+$("#lbX").onclick=()=>$("#lb").classList.remove("open");$("#lbP").onclick=e=>{e.stopPropagation();openLb(gIdx-1)};$("#lbN").onclick=e=>{e.stopPropagation();openLb(gIdx+1)};
+$("#lb").onclick=e=>{if(e.target.id==="lb")$("#lb").classList.remove("open")};
+document.addEventListener("keydown",e=>{if(!$("#lb").classList.contains("open"))return;if(e.key==="Escape")$("#lb").classList.remove("open");if(e.key==="ArrowLeft")openLb(gIdx-1);if(e.key==="ArrowRight")openLb(gIdx+1)});
+function renderPro(sr,email){
+  $("#proPhoto").src=P("brockport-smile.jpg");
+  renderReels();
+  sr=pickSenior(sr);const rows=CAREER.map(c=>[c.lab,c.gp,c.pts]).concat([["Brockport '26–27*",sr.gp,sr.pts]]);
+  const tot=rows.reduce((a,r)=>[a[0]+r[1],a[1]+r[2]],[0,0]);
+  const t=$("#proStats");t.innerHTML="<tr><th>Season</th><th>GP</th><th>PTS</th><th>PPG</th></tr>";
+  rows.concat([["Career",tot[0],tot[1]]]).forEach((r,i,arr)=>{const tr=el("tr",i===arr.length-1?"tot":null);tr.append(el("td",null,r[0]),el("td","n",String(r[1])),el("td","n",String(r[2])),el("td","n",r[1]?(r[2]/r[1]).toFixed(1):"–"));t.append(tr)});
+  $("#proPts").textContent=tot[1].toLocaleString()+" (JUCO + NCAA)";
+  const c=$("#proContact");c.innerHTML="";
+  const em=String(email||"").trim();
+  if(/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){c.append(el("div","eyebrow","Contact")); const a=el("a","btn btn-gold btn-sm",em);a.href="mailto:"+em;c.append(a)}
+  else{c.append(el("p","msg","Contact: message Cam on his socials, or use the message form below."))}
+}
+const GOAL=Number((window.SITE||{}).goal)||6000;{const ga=document.getElementById("goalAmt");if(ga)ga.textContent="$"+GOAL.toLocaleString();}
+const MILES_DEFAULT=[[1000,"Roster spot deposit for Portugal"],[3000,"Portugal trip & flights"],[4500,"Pro tryouts & exposure camps"],[6000,"Game film, tape & travel after graduation"]];
+function renderMiles(raised,list){
+  const m=$("#miles");if(!m)return;m.innerHTML="";raised=Number(raised)||0;
+  (list&&list.length?list:MILES_DEFAULT).forEach(([amt,lab])=>{const d=el("div",raised>=amt?"done":null),i=el("i",null,raised>=amt?"✓":"");d.append(i,el("b",null,"$"+Number(amt).toLocaleString()),el("span",null,lab));m.append(d)});
+}
+function renderQuotes(list){
+  list=(list||[]).filter(q=>q&&q.text);const sec=$("#quotes");if(!sec)return;
+  sec.style.display=list.length?"":"none";const g=$("#qgrid");g.innerHTML="";
+  list.forEach(q=>{const c=el("div","qcard");c.append(el("p",null,q.text),el("div","by","— "+(q.name||"A supporter")));g.append(c)});
+}
+
+
+/* ---------- box scores (v4) ---------- */
+const BOX_DEFAULT={
+ g01:{box:"https://gobrockport.com/sports/mens-basketball/stats/2026-2027/suny-delhi/boxscore/12853",pts:13,reb:2,ast:2},
+ g02:{box:"https://gobrockport.com/sports/mens-basketball/stats/2026-2027/suny-canton/boxscore/12854",pts:16,reb:6,ast:1}
+};
+function boxes(){return Object.assign({},BOX_DEFAULT,(window.SITE&&SITE.games)||{})}
+function seniorFromBoxes(){const b=boxes();let gp=0,pts=0;SCHED.forEach(g=>{const x=b[g.id];if(x&&x.pts!==""&&x.pts!=null&&!isNaN(Number(x.pts))){gp++;pts+=Number(x.pts)}});return{gp,pts}}
+function pickSenior(sr){const b=seniorFromBoxes(),base=sr||SENIOR_DEFAULT;return b.gp>=base.gp&&b.gp>0?b:base}
+function addBox(rs,g,past){
+  const x=boxes()[g.id];
+  if(x&&x.pts!=null&&x.pts!==""){const l=el("span","line");l.append("Cam: ");l.append(el("b",null,x.pts+" PTS"));if(x.reb!=null&&x.reb!=="")l.append(" · "+x.reb+" REB");if(x.ast!=null&&x.ast!=="")l.append(" · "+x.ast+" AST");rs.append(l)}
+  const u=x&&safeUrl(x.box);if(u){const a=el("a","bx","Box score ↗");a.href=u;a.target="_blank";a.rel="noopener";rs.append(a)}
+  
+}
+
+/* ---------- countdowns ---------- */
+function parts(ms){ms=Math.max(0,ms);return{d:Math.floor(ms/864e5),h:Math.floor(ms/36e5)%24,m:Math.floor(ms/6e4)%60,s:Math.floor(ms/1e3)%60}}
+function fillCd(node,p,withSec){if(!node)return;node.innerHTML="";[["d","Days"],["h","Hrs"],["m","Min"]].concat(withSec?[["s","Sec"]]:[]).forEach(([k,l])=>{const d=el("div");d.append(el("div","v",String(p[k]).padStart(2,"0")),el("div","l",l));node.append(d)})}
+const PT=new Date("2027-06-01T00:00:00");
+function tick(){
+  const now=new Date();
+  const pt=parts(PT-now);$("#ptDays").textContent=pt.d;fillCd($("#ptCountdown"),pt,true);
+  const next=games().find(g=>gameStart(g)>now);if(next)fillCd($("#gameCd"),parts(gameStart(next)-now),true);
+}
+
+
+
+/* ---------- links, GoFundMe, socials ---------- */
+function applySettings(){
+  const url=gfm();$$(".gfm").forEach(a=>a.href=url);
+  const raised=Number(CFG.raised);renderMiles(raised,CFG.milestones);
+  if(raised>0){$("#progWrap").style.display="block";$("#raisedTxt").textContent="$"+raised.toLocaleString()+" raised of $"+GOAL.toLocaleString()+" goal";setTimeout(()=>$("#prog").style.width=Math.min(100,raised/GOAL*100)+"%",150)}
+  const icons={ig:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
+    fb:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg>',
+    yt:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8zM10 15V9l5.2 3z"/></svg>',
+    gfm:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 4.8 6.6 4.8c2.2 0 3.6 1.3 5.4 3.2 1.8-1.9 3.2-3.2 5.4-3.2 3.6 0 5.7 3.7 4.2 7C19.5 16.4 12 21 12 21z"/></svg>'};
+  const ch=String(CFG.youtubeChannelId||"").trim(),so=$("#socials");so.innerHTML="";
+  [["ig","Instagram",CFG.instagram],["fb","Facebook",CFG.facebook],["yt","YouTube",/^UC/.test(ch)?"https://www.youtube.com/channel/"+ch:""],["gfm","GoFundMe",url]].forEach(([k,n,u])=>{const ok=safeUrl(u);if(!ok)return;const a=el("a","soc");a.innerHTML=icons[k];a.append(n);a.href=ok;a.target="_blank";a.rel="noopener";so.append(a)});
+}
+$("#copyGfm").onclick=async()=>{try{await navigator.clipboard.writeText(gfm());$("#copyMsg").textContent="Link copied — paste it anywhere to share.";$("#copyMsg").className="msg ok"}catch(e){$("#copyMsg").textContent=gfm();$("#copyMsg").className="msg"}};
+
+/* ---------- feedback (Netlify Forms) ---------- */
+$$("#reacts button").forEach(b=>b.onclick=()=>{$("#fbReact").value=b.dataset.r;$$("#reacts button").forEach(x=>x.classList.toggle("on",x===b))});
+function renderWall(){
+  const w=$("#wall");w.innerHTML="";const list=CFG.shoutouts||[];
+  if(!list.length){w.append(el("div","empty","Be the first shout-out on the wall! Send a message and Cam's favorites get posted here. 🔥"));return}
+  list.forEach(f=>{const n=el("div","note"),top=el("div","top");top.append(el("div","who",(f.react||"🔥")+" "+(f.name||"A fan")));n.append(top,el("p",null,f.text||""));w.append(n)});
+}
+$("#fbForm").onsubmit=async e=>{
+  e.preventDefault();const m=$("#fbMsg"),form=e.target;
+  if(!$("#fbText").value.trim()){m.textContent="Write a message first.";m.className="msg err";return}
+  try{const r=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(form)).toString()});
+    if(!r.ok)throw 0;form.reset();$("#fbReact").value="🔥";m.textContent="Sent! Cam will see it. 🙌";m.className="msg ok"}
+  catch(err){m.textContent="Couldn't send right now — try again, or message Cam on his socials.";m.className="msg err"}
+};
+
+$("#upForm").onsubmit=async e=>{e.preventDefault();const m=$("#upMsg");try{const r=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(e.target)).toString()});if(!r.ok)throw 0;e.target.reset();m.textContent="You're on the list! 🏀";m.className="msg ok"}catch(err){m.textContent="Couldn't sign up right now — try again.";m.className="msg err"}};
+
+/* ---------- ads & sponsors ---------- */
+function renderAds(){
+  const ads=(CFG.ads||[]).filter(a=>a&&a.image);const ac=String((CFG.adsense||{}).client||"").trim();let usedAdsense=false;
+  $$(".adwrap").forEach(w=>{const slot=w.dataset.slot,box=w.querySelector(".wrap");box.innerHTML="";
+    const a=ads.find(x=>x.slot===slot);
+    if(a){const d=el("div","adbox"+(a.size==="square"?" side":""));d.append(el("span","tag","Sponsored"+(a.sponsor?" · "+a.sponsor:"")));const im=document.createElement("img");im.src=a.image;im.alt=a.alt||a.sponsor||"Sponsor";im.loading="lazy";
+      const u=safeUrl(a.link);if(u){const l=el("a");l.href=u;l.target="_blank";l.rel="sponsored noopener";l.append(im);d.append(l)}else d.append(im);box.append(d);w.classList.add("on")}
+    else if(/^ca-pub-\d+$/.test(ac)&&(CFG.adsense.slots||{})[slot]){const d=el("div","adbox");d.append(el("span","tag","Advertisement"));const ins=document.createElement("ins");ins.className="adsbygoogle";ins.style.display="block";ins.setAttribute("data-ad-client",ac);ins.setAttribute("data-ad-slot",String(CFG.adsense.slots[slot]));ins.setAttribute("data-ad-format","auto");ins.setAttribute("data-full-width-responsive","true");d.append(ins);box.append(d);w.classList.add("on");usedAdsense=true}
+    else w.classList.remove("on");
+  });
+  if(usedAdsense&&!document.getElementById("adsjs")){const sc=document.createElement("script");sc.id="adsjs";sc.async=true;sc.crossOrigin="anonymous";sc.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+ac;document.head.append(sc);sc.onload=()=>$$("ins.adsbygoogle").forEach(()=>{try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}})}
+  const g=$("#spgrid");g.innerHTML="";
+  (CFG.sponsors||[]).filter(x=>x&&x.name).forEach(x=>{const u=safeUrl(x.link),c=el(u?"a":"div","sp");if(u){c.href=u;c.target="_blank";c.rel="sponsored noopener"}
+    if(x.logo){const im=document.createElement("img");im.src=x.logo;im.alt=x.name;im.loading="lazy";c.append(im)}c.append(el("div","nm",x.name));if(x.tier)c.append(el("div","tr",x.tier));g.append(c)});
+  const em=String(CFG.sponsorEmail||CFG.contactEmail||"").trim(),cta=el(/@/.test(em)?"a":"div","sp cta");
+  if(/@/.test(em))cta.href="mailto:"+em+"?subject="+encodeURIComponent("Sponsoring Cam Dyer");
+  cta.append(el("b",null,"Your business here"),el("span",null,"Logo on the site + shout-out in weekly episodes."+(/@/.test(em)?" "+em:" Message us through the form above.")));g.append(cta);
+}
+
+/* ---------- start ---------- */
+$("#heroImg").src=P(HERO_PHOTO);renderStops();renderChapter();renderBars();applySettings();renderGallery();renderPro(Number(CFG.seniorPoints)>0&&Number(CFG.seniorGames)>0?{pts:Number(CFG.seniorPoints),gp:Number(CFG.seniorGames)}:null,CFG.contactEmail);renderQuotes(CFG.quotes);renderAds();renderThousand(Number(CFG.seniorPoints)>0&&Number(CFG.seniorGames)>0?{pts:Number(CFG.seniorPoints),gp:Number(CFG.seniorGames)}:null);renderYouTube();renderVlogs();renderSchedule();renderWall();
+setInterval(tick,1000);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+$$(".reveal").forEach(n=>io.observe(n));
+</script>
+</body>
+</html>

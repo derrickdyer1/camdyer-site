@@ -1,0 +1,44 @@
+CAM DYER YOUTUBE CHANNEL — STEP BY STEP
+=======================================
+Do this on a computer (easier) with Cam's Google/Gmail account. About 20 minutes.
+
+1. CREATE THE CHANNEL
+   - Sign in to Google, then go to https://www.youtube.com/create_channel
+   - Name: Cam Dyer   Handle: try @camdyer8 (or @camdyerhoops, @camdyer_8)
+   - Upload youtube-profile-800.png as the picture when asked.
+
+2. VERIFY THE ACCOUNT (unlocks custom thumbnails + longer videos)
+   - Go to https://www.youtube.com/verify and enter a phone number for a text code.
+
+3. BRAND THE CHANNEL  (https://studio.youtube.com > Customization > Branding)
+   - Banner image: youtube-banner-2560x1440.jpg
+   - Picture: youtube-profile-800.png
+   - Click PUBLISH (top right).
+
+4. CHANNEL DESCRIPTION  (Customization > Basic info)
+   Paste:
+   Senior guard/forward at SUNY Brockport (#8). From Rochester at 15 to pro ball
+   overseas. New "Road to Overseas" vlog every gameday + a weekly episode.
+   Help send Cam to Portugal: https://gofund.me/92f08a1c0
+   - Under Links, add: GoFundMe, Instagram, Facebook, and the website.
+
+5. MAKE TWO PLAYLISTS  (Studio > Content > Playlists > New playlist)
+   - "Gameday Vlogs"          (the short vertical clips — these post as Shorts)
+   - "Road to Overseas — Weekly" (the 8–12 minute episodes)
+
+6. UPLOAD A VIDEO (phone: YouTube app > + > Video; computer: Studio > Create > Upload)
+   - Title pattern: "Road to Overseas Day 3: Buffalo State" / "Road to Overseas Wk 1: 2-0 Start"
+   - Description: 2 lines about the game + the GoFundMe link.
+   - Thumbnail: upload one of the thumb-*.jpg files (custom thumbnails show on regular
+     videos; Shorts use a frame you pick in the app).
+   - Playlist: pick the right one.  Audience: "No, it's not made for kids".
+   - Visibility: Public.
+
+7. CONNECT IT TO THE WEBSITE (one time)
+   - Go to https://www.youtube.com/account_advanced and copy the Channel ID (starts with UC).
+   - Paste it into config.js > youtubeChannelId, then drag the folder onto Netlify again.
+   - From then on, every new upload shows on the website automatically.
+
+8. BEFORE MONETIZING
+   - Cam is still an NCAA athlete: run the channel by SUNY Brockport compliance.
+   - Keep school logos out of channel art you make later; game photos are fine to show.
