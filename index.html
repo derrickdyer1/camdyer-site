@@ -940,7 +940,7 @@ const PHMAP={"brockport-mediaday-ball.jpg": "photos/brockport-mediaday-ball.jpg"
 function P(f){return PHMAP[f]||f}
 const HERO_PHOTO="brockport-mediaday-ball.jpg";
 // Solo photos of Cam that rotate in the top image (group/team shots left out on purpose).
-const HERO_SET=["brockport-mediaday-ball.jpg","brockport-smile.jpg","brockport-dunk.jpg","brockport-dunk-fisher-air.jpg","brockport-doitall.jpg","brockport-longsleeve.jpg","brockport-mediaday-shot.jpg","brockport-rim-hang.jpg","brockport-drive-fisher.jpg","niagara-8-shades.jpg","niagara-8-mediaday.jpg","niagara-8-dunk-dark.jpg","niagara-8-drive.jpg","niagara-8-net.jpg","niagara-15-dunk.jpg","summer-dunk.jpg"];
+const HERO_SET=["brockport-md-arms-crossed.jpg","brockport-md-ball-hold.jpg","brockport-md-banner-dribble.jpg","brockport-md-back-8.jpg","brockport-mediaday-ball.jpg","brockport-smile.jpg","brockport-dunk.jpg","brockport-dunk-fisher-air.jpg","brockport-doitall.jpg","brockport-longsleeve.jpg","brockport-mediaday-shot.jpg","brockport-rim-hang.jpg","brockport-drive-fisher.jpg","niagara-8-shades.jpg","niagara-8-mediaday.jpg","niagara-8-dunk-dark.jpg","niagara-8-drive.jpg","niagara-8-net.jpg","niagara-15-dunk.jpg","summer-dunk.jpg"];
 function startHeroRotation(){
   const a=$("#heroImg"),b=$("#heroImg2");if(!a)return;
   const list=HERO_SET.map(f=>P(f)).concat((CFG.photos||[]).filter(p=>p&&p.file&&p.hero).map(p=>p.file));
@@ -951,6 +951,7 @@ function startHeroRotation(){
 }
 [["uprep-2021.jpg",0],["niagara-15-dunk.jpg",4],["brockport-layup.jpg",5],["brockport-mediaday-seated.jpg",6]].forEach(([f,i])=>{if(CHAPTERS[i])CHAPTERS[i].img=f});
 PHMAP["legacy-four-generations.jpg"]="photos/legacy-four-generations.jpg";
+["brockport-md-arms-crossed.jpg","brockport-md-ball-hold.jpg","brockport-md-banner-dribble.jpg","brockport-md-back-8.jpg","brockport-md-green-glow.jpg"].forEach(f=>PHMAP[f]="photos/"+f);
 CHAPTERS.unshift({yr:"Legacy",pl:"Four generations",team:"Family Legacy",loc:"The Dyer family",big:"4",img:"legacy-four-generations.jpg",fit:"contain",
   h:"Athletes. Veterans. Pros.",
   p:"Cam comes from a line of athletes and servicemen. His great-grandfather and grandfather both served in the military, and his grandfather went on to play professional basketball in Germany for more than a decade. His father played Division I football and pro Arena Football. Now Cam, the fourth generation, is following his grandfather's path overseas.",
@@ -984,6 +985,11 @@ const PHOTOS=[
 ].map(([f,era,cap])=>({src:P(f),era,cap}));
 Object.assign(PHMAP,{"brockport-doitall.jpg": "photos/brockport-doitall.jpg", "brockport-dunk-fisher-air.jpg": "photos/brockport-dunk-fisher-air.jpg", "brockport-rim-hang.jpg": "photos/brockport-rim-hang.jpg", "brockport-dunk-fisher.jpg": "photos/brockport-dunk-fisher.jpg", "brockport-longsleeve.jpg": "photos/brockport-longsleeve.jpg", "niagara-8-dunk-dark.jpg": "photos/niagara-8-dunk-dark.jpg", "brockport-starters.jpg": "photos/brockport-starters.jpg", "brockport-mediaday-trio.jpg": "photos/brockport-mediaday-trio.jpg", "brockport-mediaday-shot.jpg": "photos/brockport-mediaday-shot.jpg", "brockport-mediaday-wall.jpg": "photos/brockport-mediaday-wall.jpg", "early-days.jpg": "photos/early-days.jpg", "niagara-8-net.jpg": "photos/niagara-8-net.jpg", "niagara-8-ranked.jpg": "photos/niagara-8-ranked.jpg", "niagara-8-dunk-lakers.jpg": "photos/niagara-8-dunk-lakers.jpg", "reel-behrend-opener.mp4": "photos/reel-behrend-opener.mp4", "reel-niagara-ranked-win.mp4": "photos/reel-niagara-ranked-win.mp4", "reel-niagara-at-erie.mp4": "photos/reel-niagara-at-erie.mp4", "reel-ithaca-2nd-half.mp4": "photos/reel-ithaca-2nd-half.mp4", "reel-ithaca-1st-half.mp4": "photos/reel-ithaca-1st-half.mp4", "reel-behrend-opener-poster.jpg": "photos/reel-behrend-opener-poster.jpg", "reel-niagara-ranked-win-poster.jpg": "photos/reel-niagara-ranked-win-poster.jpg", "reel-niagara-at-erie-poster.jpg": "photos/reel-niagara-at-erie-poster.jpg", "reel-ithaca-2nd-half-poster.jpg": "photos/reel-ithaca-2nd-half-poster.jpg", "reel-ithaca-1st-half-poster.jpg": "photos/reel-ithaca-1st-half-poster.jpg"});
 [
+ ["brockport-md-arms-crossed.jpg","brockport","Senior year · media day"],
+ ["brockport-md-ball-hold.jpg","brockport","Golden Eagles #8 · senior year"],
+ ["brockport-md-banner-dribble.jpg","brockport","Elite 8 banners · media day"],
+ ["brockport-md-back-8.jpg","brockport","#8 · senior year"],
+ ["brockport-md-green-glow.jpg","brockport","Senior year · lights on"],
  ["brockport-dunk-fisher.jpg","brockport","Slam vs. St. John Fisher"],
  ["brockport-dunk-fisher-air.jpg","brockport","Flush over Fisher"],
  ["brockport-rim-hang.jpg","brockport","Hanging on the rim"],
