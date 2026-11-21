@@ -375,6 +375,7 @@ body.bucket .seal-inline{display:flex}
 #reelSchools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}#reelSchools button{background:var(--panel);border:1px solid var(--line);color:inherit;border-radius:999px;padding:6px 12px;font-weight:700;font-size:13px;cursor:pointer}#reelSchools button.on{background:var(--gold,#f2b705);color:#111;border-color:transparent}
 .reelgroup{grid-column:1/-1;width:100%;flex-basis:100%;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold,#f2b705);margin:8px 0 2px}
 #reels button{position:relative}#reels .srcbadge.ig{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}.ytreel.igreel{aspect-ratio:auto;height:min(720px,calc(100vw * 1.6));max-width:440px;margin:0 auto;background:#fff;border-radius:14px}#reels .srcbadge{position:absolute;top:6px;left:6px;background:#1877f2;color:#fff;font-style:normal;font-size:10px;font-weight:800;padding:2px 6px;border-radius:6px}#reels .noimg{aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:linear-gradient(135deg,#0d3b2a,#111);color:#fff}#reels .noimg b{font-size:22px}#reels .noimg small{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold,#f2b705)}
+#proReel.vertical{aspect-ratio:9/16;max-height:720px;width:auto;max-width:100%;display:block;margin:0 auto;background:#000;object-fit:contain}
 .ytreel{position:relative;aspect-ratio:16/9;overflow:hidden}.ytreel iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .reels{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:0 0 22px}
 .reels button{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;padding:0;text-align:left;color:var(--text)}
@@ -951,7 +952,7 @@ function startHeroRotation(){
 }
 [["uprep-2021.jpg",0],["niagara-15-dunk.jpg",4],["brockport-layup.jpg",5],["brockport-mediaday-seated.jpg",6]].forEach(([f,i])=>{if(CHAPTERS[i])CHAPTERS[i].img=f});
 PHMAP["legacy-four-generations.jpg"]="photos/legacy-four-generations.jpg";
-["brockport-md-arms-crossed.jpg","brockport-md-ball-hold.jpg","brockport-md-banner-dribble.jpg","brockport-md-back-8.jpg","brockport-md-green-glow.jpg"].forEach(f=>PHMAP[f]="photos/"+f);
+["reel-niagara-soph.mp4","reel-niagara-soph-poster.jpg","reel-niagara-story.mp4","reel-niagara-story-poster.jpg","reel-dixie-look-out.mp4","reel-dixie-look-out-poster.jpg","reel-dixie-throwback.mp4","reel-dixie-throwback-poster.jpg","reel-summer-run.mp4","reel-summer-run-poster.jpg","reel-summer-new-number.mp4","reel-summer-new-number-poster.jpg","brockport-md-arms-crossed.jpg","brockport-md-ball-hold.jpg","brockport-md-banner-dribble.jpg","brockport-md-back-8.jpg","brockport-md-green-glow.jpg"].forEach(f=>PHMAP[f]="photos/"+f);
 CHAPTERS.unshift({yr:"Legacy",pl:"Four generations",team:"Family Legacy",loc:"The Dyer family",big:"4",img:"legacy-four-generations.jpg",fit:"contain",
   h:"Athletes. Veterans. Pros.",
   p:"Cam comes from a line of athletes and servicemen. His great-grandfather and grandfather both served in the military, and his grandfather went on to play professional basketball in Germany for more than a decade. His father played Division I football and pro Arena Football. Now Cam, the fourth generation, is following his grandfather's path overseas.",
@@ -1019,21 +1020,44 @@ const REELS=[
  ["fb:https://www.facebook.com/derrick.dyer.18/videos/574555087853933/","16 pts, 4 big blocks · overtime win, 2-0 on the day","redrock"],
  ["fb:https://www.facebook.com/derrick.dyer.18/videos/489856125926547/","Dunk contest champion · Utah All-Star Game","dixie"],
  ["fb:https://www.facebook.com/derrick.dyer.18/videos/4444872558860776/","LV Punishers · undefeated weekend in California","aau"],
+ ["reel-niagara-soph","Sophomore #8 highlights · SUNY Niagara","niagara","","v"],
+ ["ig:C1YWTSQNI7G","Freshman mid-season highlights · #15 · 2023–24","niagara"],
+ ["reel-niagara-story","Thunderwolves home gym","niagara","","v"],
+ ["reel-dixie-look-out","\"Look out\" · Dixie Flyers","dixie","","v"],
+ ["reel-dixie-throwback","Throwback · Dixie High","dixie","","v"],
+ ["ig:Ccx7IWiLR_Y","Showtime Cam · Rochester Keepers (2022)","summer"],
+ ["reel-summer-run","Summer run","summer","","v"],
+ ["reel-summer-new-number","New number","summer","","v"],
  ["yt:klZ7_5dUCaA","Uprep highlights · shooting guard","uprep"],
  ["ig:DWb6HkdCAkc","2025–26 full-season highlights · 11.7 PPG, 5.0 RPG · via @triplecondi.highlights","brockport"]
 ].concat((CFG.reels||[]).filter(r=>r&&(r.file||r.youtube||r.facebook||r.instagram)).map(r=>[r.youtube?"yt:"+r.youtube:r.facebook?"fb:"+r.facebook:r.instagram?"ig:"+r.instagram:r.file,r.title||"",r.school||"brockport",r.thumb||""]));
-const SCHOOLS={brockport:"SUNY Brockport",niagara:"SUNY Niagara",redrock:"Red Rock Academy",dixie:"Dixie High",aau:"AAU · Las Vegas",uprep:"Uprep"};
-const SCHOOL_ORDER=["brockport","niagara","redrock","dixie","aau","uprep"];
+const SCHOOLS={brockport:"SUNY Brockport",niagara:"SUNY Niagara",redrock:"Red Rock Academy",dixie:"Dixie High",aau:"AAU · Las Vegas",summer:"Summer",uprep:"Uprep"};
+const SCHOOL_ORDER=["brockport","niagara","redrock","dixie","aau","summer","uprep"];
 let reelIdx=0,reelSchool="all";
 function reelThumb(x){if(x[3])return /^https?:|^\/|\//.test(x[3])?x[3]:P(x[3]);if(x[0].startsWith("yt:"))return "https://i.ytimg.com/vi/"+x[0].slice(3)+"/hqdefault.jpg";if(/^(fb|ig):/.test(x[0]))return "";return P(x[0]+"-poster.jpg")}
 function renderReels(){
   const v=$("#proReel"),r=REELS[reelIdx],b=$("#reels");if(!v||!b)return;
   const yb=$("#proReelYt"),ext=/^(yt|fb|ig):/.test(r[0]);yb.classList.toggle("igreel",r[0].startsWith("ig:"));
   if(ext){v.pause();v.style.display="none";yb.style.display="";const id=r[0];if(yb.dataset.id!==id){yb.dataset.id=id;yb.innerHTML="";const f=document.createElement("iframe");f.src=id.startsWith("yt:")?"https://www.youtube-nocookie.com/embed/"+id.slice(3)+"?rel=0":id.startsWith("ig:")?"https://www.instagram.com/reel/"+id.slice(3)+"/embed":"https://www.facebook.com/plugins/video.php?show_text=false&width=734&href="+encodeURIComponent(id.slice(3));f.title=r[1];f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write";f.allowFullscreen=true;yb.append(f)}}
-  else{yb.style.display="none";yb.innerHTML="";yb.dataset.id="";v.style.display="";const src=/\.(mp4|mov|webm)$/i.test(r[0])?r[0]:P(r[0]+".mp4");if(v.getAttribute("src")!==src){v.src=src;v.poster=reelThumb(r)}}
+  else{yb.style.display="none";yb.innerHTML="";yb.dataset.id="";v.style.display="";v.classList.toggle("vertical",r[4]==="v");const src=/\.(mp4|mov|webm)$/i.test(r[0])?r[0]:P(r[0]+".mp4");if(v.getAttribute("src")!==src){v.src=src;v.poster=reelThumb(r)}}
   $("#reelTitle").textContent=(SCHOOLS[r[2]]||"Highlights")+" · "+r[1];
   const chips=$("#reelSchools");if(chips){chips.innerHTML="";const have=SCHOOL_ORDER.filter(k=>REELS.some(x=>x[2]===k));if(reelSchool!=="all"&&!have.includes(reelSchool))reelSchool="all";["all",...have].forEach(k=>{const c=el("button",k===reelSchool?"on":null,k==="all"?"All schools":SCHOOLS[k]);c.onclick=()=>{reelSchool=k;renderReels()};chips.append(c)})}
-  b.innerHTML="";SCHOOL_ORDER.filter(k=>reelSchool==="all"||k===reelSchool).forEach(k=>{const items=REELS.map((x,i)=>[x,i]).filter(([x])=>x[2]===k);if(!items.length)return;const h=el("div","reelgroup",SCHOOLS[k]);b.append(h);items.forEach(([x,i])=>{const bt=el("button",i===reelIdx?"on":null),th=reelThumb(x);if(th){const im=document.createElement("img");im.src=th;im.alt="";im.loading="lazy";bt.append(im)}else{const ph=el("div","noimg");ph.append(el("b",null,"▶"),el("small",null,SCHOOLS[x[2]]||""));bt.append(ph)};if(x[0].startsWith("fb:"))bt.append(el("em","srcbadge","Facebook"));if(x[0].startsWith("ig:"))bt.append(el("em","srcbadge ig","Instagram"));bt.append(el("span",null,x[1]));bt.onclick=()=>{reelIdx=i;renderReels();if(!/^(yt|fb):/.test(x[0]))v.play().catch(()=>{})};b.append(bt)})});
+  b.innerHTML="";SCHOOL_ORDER.filter(k=>reelSchool==="all"||k===reelSchool).forEach(k=>{const items=REELS.map((x,i)=>[x,i]).filter(([x])=>x[2]===k);if(!items.length)return;const h=el("div","reelgroup",SCHOOLS[k]);b.append(h);items.forEach(([x,i])=>{const bt=el("button",i===reelIdx?"on":null),th=reelThumb(x);if(th){const im=document.createElement("img");im.src=th;im.alt="";im.loading="lazy";bt.append(im)}else{const ph=el("div","noimg");ph.append(el("b",null,"▶"),el("small",null,SCHOOLS[x[2]]||""));bt.append(ph)};if(x[0].startsWith("fb:"))bt.append(el("em","srcbadge","Facebook"));if(x[0].startsWith("ig:"))bt.append(el("em","srcbadge ig","Instagram"));bt.append(el("span",null,x[1]));bt.onclick=()=>{reelIdx=i;renderReels();if(!/^(yt|fb|ig):/.test(x[0]))v.play().catch(()=>{})};b.append(bt)})});
+}
+// Auto-rotate highlight clips (muted previews, every 5s) until the viewer picks one.
+let reelAuto=true;
+function startReelRotation(){
+  const v=$("#proReel"),box=$("#reels");if(!v||!box)return;
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches){reelAuto=false;return}
+  const native=()=>REELS.map((x,i)=>[x,i]).filter(([x])=>!/^(yt|fb|ig):/.test(x[0])&&(reelSchool==="all"||x[2]===reelSchool)).map(([,i])=>i);
+  let onScreen=false;new IntersectionObserver(es=>{onScreen=es[0].isIntersecting},{threshold:0}).observe(v);
+  const stop=()=>{if(!reelAuto)return;reelAuto=false;v.muted=false};
+  box.addEventListener("click",stop,true);v.addEventListener("click",stop);v.addEventListener("volumechange",()=>{if(!v.muted)stop()});
+  const first=native();if(first.length&&/^(yt|fb|ig):/.test(REELS[reelIdx][0])){reelIdx=first[0];renderReels()}
+  v.muted=true;v.playsInline=true;
+  const tick=()=>{if(!reelAuto||document.hidden)return;if(!onScreen){v.pause();return}const ids=native();if(!ids.length)return;const at=ids.indexOf(reelIdx);reelIdx=ids[(at+1)%ids.length];renderReels();v.muted=true;v.play().catch(()=>{})};
+  setInterval(tick,5000);
+  new IntersectionObserver(es=>{if(es[0].isIntersecting&&reelAuto){v.muted=true;v.play().catch(()=>{})}},{threshold:0}).observe(v);
 }
 let gEra="all",gList=[],gIdx=0;
 function extraPhotos(){return (CFG.photos||[]).filter(p=>p&&p.file).map(p=>({src:p.file,era:p.era||"brockport",cap:p.caption||""}))}
@@ -1154,7 +1178,7 @@ function renderAds(){
 }
 
 /* ---------- start ---------- */
-startHeroRotation();renderStops();renderChapter();renderBars();applySettings();renderGallery();renderPro(Number(CFG.seniorPoints)>0&&Number(CFG.seniorGames)>0?{pts:Number(CFG.seniorPoints),gp:Number(CFG.seniorGames)}:null,CFG.contactEmail);renderQuotes(CFG.quotes);renderAds();renderThousand(Number(CFG.seniorPoints)>0&&Number(CFG.seniorGames)>0?{pts:Number(CFG.seniorPoints),gp:Number(CFG.seniorGames)}:null);renderYouTube();renderVlogs();renderSchedule();renderWall();
+startHeroRotation();setTimeout(startReelRotation,0);renderStops();renderChapter();renderBars();applySettings();renderGallery();renderPro(Number(CFG.seniorPoints)>0&&Number(CFG.seniorGames)>0?{pts:Number(CFG.seniorPoints),gp:Number(CFG.seniorGames)}:null,CFG.contactEmail);renderQuotes(CFG.quotes);renderAds();renderThousand(Number(CFG.seniorPoints)>0&&Number(CFG.seniorGames)>0?{pts:Number(CFG.seniorPoints),gp:Number(CFG.seniorGames)}:null);renderYouTube();renderVlogs();renderSchedule();renderWall();
 setInterval(tick,1000);
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
 $$(".reveal").forEach(n=>io.observe(n));
