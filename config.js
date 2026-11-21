@@ -6,7 +6,8 @@
 window.SITE = {
   // Links (paste the full https:// address between the quotes)
   gofundme:  "https://gofund.me/92f08a1c0",
-  instagram: "",   // e.g. "https://www.instagram.com/camdyer"
+  instagram: "https://www.instagram.com/whytheyhatec/",
+  tiktok:    "https://www.tiktok.com/@whytheyhatecj",
   facebook:  "",   // e.g. "https://www.facebook.com/camdyer"
 
   // YouTube: paste Cam's channel ID (starts with "UC...").
@@ -16,8 +17,8 @@ window.SITE = {
   // 1,000-POINT WATCH: Cam's points and games THIS season (2026-27).
   // Update after every game. When his career total hits 1,000 the
   // "Certified Bucket" badge turns on at the top of the site automatically.
-  seniorPoints: 29,
-  seniorGames: 2,
+  seniorPoints: 44,
+  seniorGames: 3,
 
 
   // PRO PROFILE: email scouts/agents should use (leave "" to hide)
@@ -80,13 +81,14 @@ window.SITE = {
   games: {
     g01: { pts: 13, reb: 2, ast: 2, box: "https://gobrockport.com/sports/mens-basketball/stats/2026-2027/suny-delhi/boxscore/12853" },
     g02: { pts: 16, reb: 6, ast: 1, box: "https://gobrockport.com/sports/mens-basketball/stats/2026-2027/suny-canton/boxscore/12854" },
-    // g03: { pts: 0, reb: 0, ast: 0, box: "paste box score link" },
+    g03: { pts: 15, reb: 5, ast: 2, box: "https://gobrockport.com/sports/mens-basketball/stats/2026-2027/buffalo-state/boxscore/12855" },
   },
 
   // Final scores. Game numbers match the schedule (g01 = first game).
   results: {
     g01: "W 80-67",
     g02: "W 92-76",
+    g03: "W 72-68",
   },
 
   // Vlogs hosted on this site. Newest games show first automatically.
