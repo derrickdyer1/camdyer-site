@@ -362,6 +362,7 @@ body.bucket .seal-inline{display:flex}
 .boxedit input{padding:7px 8px;font-size:13px}
 .boxedit .wide{grid-column:1/-1}
 @media(max-width:600px){.rs .line,.rs a.bx{display:inline-block;margin-right:10px}}
+.ytreel{position:relative;aspect-ratio:16/9;overflow:hidden}.ytreel iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .reels{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:-10px 0 22px}
 .reels button{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;padding:0;text-align:left;color:var(--text)}
 .reels button.on{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
@@ -556,6 +557,7 @@ body.bucket .seal-inline{display:flex}
       <div class="reveal">
         <div class="eyebrow" id="reelTitle">Highlight reels</div>
         <video class="reel" id="proReel" controls playsinline preload="metadata"></video>
+        <div class="reel ytreel" id="proReelYt" style="display:none"></div>
         <div class="reels" id="reels"></div>
         <div class="eyebrow">Honors &amp; milestones</div>
         <ul class="honors">
@@ -726,7 +728,7 @@ const CHAPTERS = [
  {yr:"Age 15",pl:"Rochester, NY",team:"Uprep",loc:"Rochester, New York",big:"15",
   h:"Where it started",
   p:"Cam didn't pick up a basketball seriously until he was 15. Back home in Rochester at University Prep, he went from late starter to the kid who never left the gym.",
-  li:["Started organized basketball at 15","Hometown roots: Rochester, NY"]},
+  li:["Started organized basketball at 15","Hometown roots: Rochester, NY"],cta:["▶ Watch Uprep highlights","https://youtu.be/klZ7_5dUCaA"]},
  {yr:"AAU",pl:"Las Vegas, NV",team:"Vegas Elite",loc:"Las Vegas, Nevada · AAU",big:"LV",
   h:"Proving ground",
   p:"Summer ball in Las Vegas — the AAU capital of the country — against some of the best young talent in the West.",
@@ -804,7 +806,7 @@ function renderChapter(){
   const pv=el("button","btn btn-ghost btn-sm","← Prev");pv.disabled=chIdx===0;pv.style.opacity=chIdx===0?.4:1;pv.onclick=()=>{if(chIdx>0){chIdx--;renderStops();renderChapter()}};
   const nx=el("button","btn btn-ghost btn-sm","Next →");nx.disabled=chIdx===CHAPTERS.length-1;nx.style.opacity=nx.disabled?.4:1;nx.onclick=()=>{if(chIdx<CHAPTERS.length-1){chIdx++;renderStops();renderChapter()}};
   nav.append(pv,nx);
-  if(c.cta){const a=el("a","btn btn-gold btn-sm",c.cta[0]);a.href=c.cta[1];nav.append(a)}
+  if(c.cta){const a=el("a","btn btn-gold btn-sm",c.cta[0]);a.href=c.cta[1];if(/^https?:/.test(c.cta[1])){a.target="_blank";a.rel="noopener"}nav.append(a)}
   body.append(nav);box.append(art,body);
 }
 function renderBars(){
@@ -980,14 +982,17 @@ const REELS=[
  ["reel-ithaca-1st-half","At Ithaca, 1st half · Brockport"],
  ["reel-niagara-ranked-win","No. 13 SUNY Niagara top-20 win · 2024–25"],
  ["highlight-niagara","SUNY Niagara highlights · 2024–25"],
- ["reel-niagara-at-erie","SUNY Niagara at Erie CC"]
+ ["reel-niagara-at-erie","SUNY Niagara at Erie CC"],
+ ["yt:klZ7_5dUCaA","Uprep highlights · shooting guard"]
 ];
 let reelIdx=0;
 function renderReels(){
   const v=$("#proReel"),r=REELS[reelIdx],b=$("#reels");if(!v||!b)return;
-  const src=P(r[0]+".mp4");if(v.getAttribute("src")!==src){v.src=src;v.poster=P(r[0]+"-poster.jpg")}
+  const yb=$("#proReelYt"),isYt=r[0].startsWith("yt:");
+  if(isYt){v.pause();v.style.display="none";yb.style.display="";const id=r[0].slice(3);if(yb.dataset.id!==id){yb.dataset.id=id;yb.innerHTML="";const f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+id+"?rel=0";f.title=r[1];f.allow="encrypted-media; picture-in-picture; fullscreen";f.allowFullscreen=true;yb.append(f)}}
+  else{yb.style.display="none";yb.innerHTML="";yb.dataset.id="";v.style.display="";const src=P(r[0]+".mp4");if(v.getAttribute("src")!==src){v.src=src;v.poster=P(r[0]+"-poster.jpg")}}
   $("#reelTitle").textContent="Highlight reels · "+r[1];
-  b.innerHTML="";REELS.forEach((x,i)=>{const bt=el("button",i===reelIdx?"on":null),im=document.createElement("img");im.src=P(x[0]+"-poster.jpg");im.alt="";im.loading="lazy";bt.append(im,el("span",null,x[1]));bt.onclick=()=>{reelIdx=i;renderReels();v.play().catch(()=>{})};b.append(bt)});
+  b.innerHTML="";REELS.forEach((x,i)=>{const bt=el("button",i===reelIdx?"on":null),im=document.createElement("img");im.src=x[0].startsWith("yt:")?"https://i.ytimg.com/vi/"+x[0].slice(3)+"/hqdefault.jpg":P(x[0]+"-poster.jpg");im.alt="";im.loading="lazy";bt.append(im,el("span",null,x[1]));bt.onclick=()=>{reelIdx=i;renderReels();if(!x[0].startsWith("yt:"))v.play().catch(()=>{})};b.append(bt)});
 }
 let gEra="all",gList=[],gIdx=0;
 function extraPhotos(){return (CFG.photos||[]).filter(p=>p&&p.file).map(p=>({src:p.file,era:p.era||"brockport",cap:p.caption||""}))}
