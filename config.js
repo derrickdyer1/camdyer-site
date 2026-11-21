@@ -41,6 +41,8 @@ window.SITE = {
 
   // EXTRA PHOTOS: copy the photo into the photos folder, then add a line.
   // era is one of: "brockport", "niagara", "uprep", "summer"
+  // Add  hero: true  to also put a solo photo of Cam in the rotating top image.
+  // { file: "photos/new-pic.jpg", era: "brockport", caption: "Senior night", hero: true },
   photos: [
     // { file: "photos/senior-night.jpg", era: "brockport", caption: "Senior night" },
   ],
@@ -96,7 +98,7 @@ window.SITE = {
   // For a YouTube video use:  youtube: "VIDEO_ID"  instead of file/poster.
   // Highlight reels on the Pro Profile, grouped by school.
   // school: "brockport" | "niagara" | "redrock" | "dixie" | "aau" | "uprep"
-  // Use ONE of: file: "photos/clip.mp4" | youtube: "VIDEO_ID" | facebook: "https://www.facebook.com/.../videos/123/"
+  // Use ONE of: file: "photos/clip.mp4" | youtube: "VIDEO_ID" | facebook: "https://www.facebook.com/.../videos/123/" | instagram: "REEL_CODE"
   // thumb is optional (an image in photos/).  Example:
   // { school: "dixie", title: "Dixie High senior highlights", youtube: "abc123", thumb: "dixie-8.jpg" },
   reels: [
