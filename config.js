@@ -12,7 +12,8 @@ window.SITE = {
 
   // YouTube: paste Cam's channel ID (starts with "UC...").
   // Once it's here, every video Cam uploads shows on the site automatically.
-  youtubeChannelId: "",
+  youtube: "https://www.youtube.com/@camdyer8",
+  youtubeChannelId: "UClAGJx7ALWgqb3xagr3TpMw",
 
   // 1,000-POINT WATCH: Cam's points and games THIS season (2026-27).
   // Update after every game. When his career total hits 1,000 the
