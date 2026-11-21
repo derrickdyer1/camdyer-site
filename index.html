@@ -373,7 +373,7 @@ body.bucket .seal-inline{display:flex}
 @media(max-width:600px){.rs .line,.rs a.bx{display:inline-block;margin-right:10px}}
 #reelSchools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}#reelSchools button{background:var(--panel);border:1px solid var(--line);color:inherit;border-radius:999px;padding:6px 12px;font-weight:700;font-size:13px;cursor:pointer}#reelSchools button.on{background:var(--gold,#f2b705);color:#111;border-color:transparent}
 .reelgroup{grid-column:1/-1;width:100%;flex-basis:100%;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold,#f2b705);margin:8px 0 2px}
-#reels button{position:relative}#reels .srcbadge{position:absolute;top:6px;left:6px;background:#1877f2;color:#fff;font-style:normal;font-size:10px;font-weight:800;padding:2px 6px;border-radius:6px}#reels .noimg{aspect-ratio:16/9;display:grid;place-items:center;background:#111;font-size:22px}
+#reels button{position:relative}#reels .srcbadge{position:absolute;top:6px;left:6px;background:#1877f2;color:#fff;font-style:normal;font-size:10px;font-weight:800;padding:2px 6px;border-radius:6px}#reels .noimg{aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:linear-gradient(135deg,#0d3b2a,#111);color:#fff}#reels .noimg b{font-size:22px}#reels .noimg small{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold,#f2b705)}
 .ytreel{position:relative;aspect-ratio:16/9;overflow:hidden}.ytreel iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .reels{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:0 0 22px}
 .reels button{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;padding:0;text-align:left;color:var(--text)}
@@ -998,10 +998,14 @@ const REELS=[
  ["reel-niagara-ranked-win","No. 13 SUNY Niagara top-20 win · 2024–25","niagara"],
  ["highlight-niagara","SUNY Niagara highlights · 2024–25","niagara"],
  ["reel-niagara-at-erie","At Erie CC","niagara"],
+ ["fb:https://www.facebook.com/derrick.dyer.18/videos/247792574345448/","24 pts, 8 reb, 2 blk, 3 stl · 5-7 from three in a win","redrock"],
+ ["fb:https://www.facebook.com/derrick.dyer.18/videos/574555087853933/","16 pts, 4 big blocks · overtime win, 2-0 on the day","redrock"],
+ ["fb:https://www.facebook.com/derrick.dyer.18/videos/489856125926547/","Dunk contest champion · Utah All-Star Game","dixie"],
+ ["fb:https://www.facebook.com/derrick.dyer.18/videos/4444872558860776/","LV Punishers · undefeated weekend in California","aau"],
  ["yt:klZ7_5dUCaA","Uprep highlights · shooting guard","uprep"]
 ].concat((CFG.reels||[]).filter(r=>r&&(r.file||r.youtube||r.facebook)).map(r=>[r.youtube?"yt:"+r.youtube:r.facebook?"fb:"+r.facebook:r.file,r.title||"",r.school||"brockport",r.thumb||""]));
-const SCHOOLS={brockport:"SUNY Brockport",niagara:"SUNY Niagara",redrock:"Red Rock Academy",dixie:"Dixie High",uprep:"Uprep"};
-const SCHOOL_ORDER=["brockport","niagara","redrock","dixie","uprep"];
+const SCHOOLS={brockport:"SUNY Brockport",niagara:"SUNY Niagara",redrock:"Red Rock Academy",dixie:"Dixie High",aau:"AAU · Las Vegas",uprep:"Uprep"};
+const SCHOOL_ORDER=["brockport","niagara","redrock","dixie","aau","uprep"];
 let reelIdx=0,reelSchool="all";
 function reelThumb(x){if(x[3])return /^https?:|^\/|\//.test(x[3])?x[3]:P(x[3]);if(x[0].startsWith("yt:"))return "https://i.ytimg.com/vi/"+x[0].slice(3)+"/hqdefault.jpg";if(x[0].startsWith("fb:"))return "";return P(x[0]+"-poster.jpg")}
 function renderReels(){
@@ -1011,7 +1015,7 @@ function renderReels(){
   else{yb.style.display="none";yb.innerHTML="";yb.dataset.id="";v.style.display="";const src=/\.(mp4|mov|webm)$/i.test(r[0])?r[0]:P(r[0]+".mp4");if(v.getAttribute("src")!==src){v.src=src;v.poster=reelThumb(r)}}
   $("#reelTitle").textContent=(SCHOOLS[r[2]]||"Highlights")+" · "+r[1];
   const chips=$("#reelSchools");if(chips){chips.innerHTML="";const have=SCHOOL_ORDER.filter(k=>REELS.some(x=>x[2]===k));if(reelSchool!=="all"&&!have.includes(reelSchool))reelSchool="all";["all",...have].forEach(k=>{const c=el("button",k===reelSchool?"on":null,k==="all"?"All schools":SCHOOLS[k]);c.onclick=()=>{reelSchool=k;renderReels()};chips.append(c)})}
-  b.innerHTML="";SCHOOL_ORDER.filter(k=>reelSchool==="all"||k===reelSchool).forEach(k=>{const items=REELS.map((x,i)=>[x,i]).filter(([x])=>x[2]===k);if(!items.length)return;const h=el("div","reelgroup",SCHOOLS[k]);b.append(h);items.forEach(([x,i])=>{const bt=el("button",i===reelIdx?"on":null),th=reelThumb(x);if(th){const im=document.createElement("img");im.src=th;im.alt="";im.loading="lazy";bt.append(im)}else bt.append(el("div","noimg","▶"));if(x[0].startsWith("fb:"))bt.append(el("em","srcbadge","Facebook"));bt.append(el("span",null,x[1]));bt.onclick=()=>{reelIdx=i;renderReels();if(!/^(yt|fb):/.test(x[0]))v.play().catch(()=>{})};b.append(bt)})});
+  b.innerHTML="";SCHOOL_ORDER.filter(k=>reelSchool==="all"||k===reelSchool).forEach(k=>{const items=REELS.map((x,i)=>[x,i]).filter(([x])=>x[2]===k);if(!items.length)return;const h=el("div","reelgroup",SCHOOLS[k]);b.append(h);items.forEach(([x,i])=>{const bt=el("button",i===reelIdx?"on":null),th=reelThumb(x);if(th){const im=document.createElement("img");im.src=th;im.alt="";im.loading="lazy";bt.append(im)}else{const ph=el("div","noimg");ph.append(el("b",null,"▶"),el("small",null,SCHOOLS[x[2]]||""));bt.append(ph)};if(x[0].startsWith("fb:"))bt.append(el("em","srcbadge","Facebook"));bt.append(el("span",null,x[1]));bt.onclick=()=>{reelIdx=i;renderReels();if(!/^(yt|fb):/.test(x[0]))v.play().catch(()=>{})};b.append(bt)})});
 }
 let gEra="all",gList=[],gIdx=0;
 function extraPhotos(){return (CFG.photos||[]).filter(p=>p&&p.file).map(p=>({src:p.file,era:p.era||"brockport",cap:p.caption||""}))}

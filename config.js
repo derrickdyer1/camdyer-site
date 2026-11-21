@@ -95,7 +95,7 @@ window.SITE = {
   // Vlogs hosted on this site. Newest games show first automatically.
   // For a YouTube video use:  youtube: "VIDEO_ID"  instead of file/poster.
   // Highlight reels on the Pro Profile, grouped by school.
-  // school: "brockport" | "niagara" | "redrock" | "dixie" | "uprep"
+  // school: "brockport" | "niagara" | "redrock" | "dixie" | "aau" | "uprep"
   // Use ONE of: file: "photos/clip.mp4" | youtube: "VIDEO_ID" | facebook: "https://www.facebook.com/.../videos/123/"
   // thumb is optional (an image in photos/).  Example:
   // { school: "dixie", title: "Dixie High senior highlights", youtube: "abc123", thumb: "dixie-8.jpg" },
