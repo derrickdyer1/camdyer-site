@@ -142,6 +142,9 @@ window.SITE = {
     { game: "g02", title: "Road to Overseas — Day 2",
       caption: "Suited up on the bus to Canton — pregame meal, getting ready, and then it's game time.",
       file: "videos/day2.mp4", poster: "videos/day2.jpg" },
+    { game: "g03", title: "Road to Overseas — Day 3",
+      caption: "Buffalo State: morning check-in, shootaround in an empty gym, then the locker room after a 72-68 win.",
+      file: "videos/day3.mp4", poster: "videos/day3.jpg" },
   ],
 
   // Favorite messages from the feedback form to show on the Hype Wall
