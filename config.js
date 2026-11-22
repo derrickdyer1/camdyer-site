@@ -109,6 +109,10 @@ window.SITE = {
   // buttons then say "Coming soon · Get notified". Give an item its own url to link it directly.
   store: "",
   merch: [
+    { name: "1,000 Point Scorer Hoodie", price: "$70", tag: "1K Club",
+      photo: "photos/merch/hoodie1k-front.jpg", photo2: "photos/merch/hoodie1k-back.jpg",
+      desc: "Celebrating Cam's 1,000 college career points: 598 at SUNY Niagara and 402+ at Brockport on the front. DYER #8 and 4 Generations of Hoops on the back.",
+      sizes: ["S","M","L","XL","2XL","3XL"], url: "" },
     { name: "Road to Overseas Hoodie", price: "$55", tag: "New",
       photo: "photos/merch/hoodie-front.jpg", photo2: "photos/merch/hoodie-back.jpg",
       desc: "Gold #8 on the chest, every stop of Cam's journey on the back, Certified Bucket down the sleeve. Heavyweight and warm.",
