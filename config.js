@@ -104,6 +104,33 @@ window.SITE = {
   reels: [
   ],
 
+  // ---------- MERCH / SHOP ----------
+  // store: link to the whole store (Fourthwall etc.). Leave "" until the store is live —
+  // buttons then say "Coming soon · Get notified". Give an item its own url to link it directly.
+  store: "",
+  merch: [
+    { name: "Road to Overseas Hoodie", price: "$55", tag: "New",
+      photo: "photos/merch/hoodie-front.jpg", photo2: "photos/merch/hoodie-back.jpg",
+      desc: "Gold #8 on the chest, every stop of Cam's journey on the back, Certified Bucket down the sleeve. Heavyweight and warm.",
+      sizes: ["S","M","L","XL","2XL","3XL"], url: "" },
+    { name: "Dyer 8 Tee", price: "$30",
+      photo: "photos/merch/tee-front.jpg", photo2: "photos/merch/tee-back.jpg",
+      desc: "DYER and the gold #8 across the chest, the full Rochester-to-Portugal route on the back. Soft cotton.",
+      sizes: ["S","M","L","XL","2XL","3XL"], url: "" },
+    { name: "Certified Bucket 1K Tee", price: "$30", tag: "1K Club",
+      photo: "photos/merch/bucket-front.jpg",
+      desc: "The gold Certified Bucket seal for Cam's 1,000 college career points. Clean white tee.",
+      sizes: ["S","M","L","XL","2XL","3XL"], url: "" },
+    { name: "#8 Dyer Dad Hat", price: "$30",
+      photo: "photos/merch/hat-front.jpg",
+      desc: "Gold #8 badge and DYER embroidered on a black adjustable dad hat. One size fits most.",
+      sizes: ["One size"], url: "" },
+    { name: "Road to Overseas Sticker", price: "$5",
+      photo: "photos/merch/sticker.jpg",
+      desc: "Waterproof 3\" die-cut vinyl for your laptop, bottle or gym bag.",
+      url: "" }
+  ],
+
   vlogs: [
     { game: "g01", title: "Road to Overseas — Day 1",
       caption: "Season opener at SUNY Delhi: the drive, the locker room, warmups and the first W of senior year.",

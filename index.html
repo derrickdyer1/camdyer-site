@@ -235,6 +235,23 @@ footer{border-top:1px solid var(--line);padding:46px 0 120px;background:var(--in
 .ts.yt{background:#ff0033;border-color:#ff0033;color:#fff}
 .ts:hover{border-color:var(--gold,#f2b705)}
 @media(max-width:560px){.ts span.n{display:none}.ts{padding:8px 10px}.ts-label{display:none}}
+#shop{padding:70px 0}
+.shopgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;margin-top:22px}
+.pcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.pimg{position:relative;aspect-ratio:1;background:#efebe3;cursor:pointer}
+.pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s}
+.pimg img.alt{opacity:0}.pimg.flip img.alt{opacity:1}.pimg.flip img.main{opacity:0}
+@media(hover:hover){.pimg:hover img.alt{opacity:1}.pimg:hover img.main{opacity:0}}
+.pimg .flipbtn{position:absolute;right:10px;bottom:10px;background:rgba(11,15,13,.78);color:#fff;border:0;border-radius:999px;padding:5px 10px;font:700 12px Inter;letter-spacing:.5px}
+.pimg .ptag{position:absolute;left:10px;top:10px;background:var(--gold);color:var(--ink);border-radius:999px;padding:4px 10px;font:800 12px "Barlow Condensed";letter-spacing:1px;text-transform:uppercase}
+.pbody{padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pbody h3{margin:0;font-family:Anton;font-weight:400;font-size:24px;letter-spacing:.5px}
+.pbody .price{font-family:Anton;color:var(--gold);font-size:22px}
+.pbody p{margin:0;color:var(--muted);font-size:14px;line-height:1.5;flex:1}
+.sizes{display:flex;gap:6px;flex-wrap:wrap}.sizes span{border:1px solid var(--line);border-radius:8px;padding:3px 8px;font-size:12px;color:var(--text)}
+.pbody .btn{justify-content:center;margin-top:6px;white-space:nowrap;font-size:15px;padding:11px 14px}
+.btn-ghost{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.shopnote{color:var(--muted);font-size:13px;margin-top:18px}
 .socials{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
 .soc{display:inline-flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;font-weight:600}
 .soc:hover{border-color:var(--gold)}
@@ -415,6 +432,7 @@ body.bucket .seal-inline{display:flex}
       <a href="#schedule">Schedule</a>
       <a href="#pro">Pro Profile</a>
       <a href="#portugal">Portugal</a>
+      <a href="#shop">Shop</a>
     </div>
     <a class="btn btn-gold btn-sm gfm" href="https://gofund.me/92f08a1c0" target="_blank" rel="noopener">Donate</a>
   </div>
@@ -592,6 +610,15 @@ body.bucket .seal-inline{display:flex}
   </div>
 </section>
 
+<section id="shop" style="display:none">
+  <div class="wrap">
+    <div class="eyebrow">Official merch · Rep the #8</div>
+    <h2 class="display">Shop</h2>
+    <p class="lead" id="shopLead">Every piece is printed to order, and every purchase helps send Cam to Portugal.</p>
+    <div class="shopgrid" id="shopgrid"></div>
+    <p class="shopnote" id="shopNote"></p>
+  </div>
+</section>
 <section id="portugal">
   <div class="wrap">
     <div class="eyebrow">June 1–10, 2027 · Eurobasket Tours</div>
@@ -1059,6 +1086,23 @@ function startReelRotation(){
   setInterval(tick,5000);
   new IntersectionObserver(es=>{if(es[0].isIntersecting&&reelAuto){v.muted=true;v.play().catch(()=>{})}},{threshold:0}).observe(v);
 }
+
+function renderShop(){
+  const items=(CFG.merch||[]).filter(m=>m&&m.name&&!m.hidden),sec=$("#shop"),g=$("#shopgrid");if(!sec||!g)return;
+  if(!items.length){sec.style.display="none";return}
+  sec.style.display="";g.innerHTML="";const store=safeUrl(CFG.store||"");const ts=$("#topSocials");if(ts&&!ts.querySelector(".shop")){const a=el("a","ts shop","🛍️ Shop");a.href="#shop";ts.append(a)}
+  items.forEach(m=>{const c=el("div","pcard"),im=el("div","pimg");
+    const a=document.createElement("img");a.className="main";a.src=m.photo;a.alt=m.name;a.loading="lazy";im.append(a);
+    if(m.photo2){const b=document.createElement("img");b.className="alt";b.src=m.photo2;b.alt=m.name+" (back)";b.loading="lazy";im.append(b);const fb=el("button","flipbtn","Front / Back");im.append(fb);im.onclick=()=>im.classList.toggle("flip")}
+    if(m.tag)im.append(el("span","ptag",m.tag));
+    const bd=el("div","pbody");const top=el("div");top.style.cssText="display:flex;justify-content:space-between;align-items:baseline;gap:10px";top.append(el("h3",null,m.name),el("span","price",m.price||""));bd.append(top,el("p",null,m.desc||""));
+    if(m.sizes&&m.sizes.length){const sz=el("div","sizes");m.sizes.forEach(x=>sz.append(el("span",null,x)));bd.append(sz)}
+    const url=safeUrl(m.url||"")||store;let bt;
+    if(url){bt=el("a","btn btn-gold",m.soon?"Pre-order":"Buy now");bt.href=url;bt.target="_blank";bt.rel="noopener"}
+    else{bt=el("button","btn btn-ghost","Coming soon · Notify me");bt.type="button";bt.onclick=()=>{const e=$("#upEmail");if(e){e.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(()=>e.focus(),500)}}}
+    bd.append(bt);c.append(im,bd);g.append(c)});
+  $("#shopNote").textContent=store?"Secure checkout, printing and shipping handled by our print-on-demand partner. Personal NIL merchandise — not affiliated with SUNY Brockport.":"Store opening soon — drop your email at the bottom of the page and we'll let you know when it's live. Personal NIL merchandise — not affiliated with SUNY Brockport.";
+}
 let gEra="all",gList=[],gIdx=0;
 function extraPhotos(){return (CFG.photos||[]).filter(p=>p&&p.file).map(p=>({src:p.file,era:p.era||"brockport",cap:p.caption||""}))}
 function renderGallery(){
@@ -1178,7 +1222,7 @@ function renderAds(){
 }
 
 /* ---------- start ---------- */
-startHeroRotation();setTimeout(startReelRotation,0);renderStops();renderChapter();renderBars();applySettings();renderGallery();renderPro(Number(CFG.seniorPoints)>0&&Number(CFG.seniorGames)>0?{pts:Number(CFG.seniorPoints),gp:Number(CFG.seniorGames)}:null,CFG.contactEmail);renderQuotes(CFG.quotes);renderAds();renderThousand(Number(CFG.seniorPoints)>0&&Number(CFG.seniorGames)>0?{pts:Number(CFG.seniorPoints),gp:Number(CFG.seniorGames)}:null);renderYouTube();renderVlogs();renderSchedule();renderWall();
+startHeroRotation();setTimeout(startReelRotation,0);renderStops();renderChapter();renderBars();applySettings();renderGallery();renderPro(Number(CFG.seniorPoints)>0&&Number(CFG.seniorGames)>0?{pts:Number(CFG.seniorPoints),gp:Number(CFG.seniorGames)}:null,CFG.contactEmail);renderQuotes(CFG.quotes);renderAds();renderThousand(Number(CFG.seniorPoints)>0&&Number(CFG.seniorGames)>0?{pts:Number(CFG.seniorPoints),gp:Number(CFG.seniorGames)}:null);renderYouTube();renderVlogs();renderSchedule();renderWall();renderShop();
 setInterval(tick,1000);
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
 $$(".reveal").forEach(n=>io.observe(n));
