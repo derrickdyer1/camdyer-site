@@ -10,3 +10,5 @@ Static site (no build step) hosted on Netlify, auto-deployed from this GitHub re
 Routine after-game update: add `results.gXX`, add `games.gXX` {pts, reb, ast, box}, commit "Game XX: <opponent>", push.
 Always check config.js still parses (node --check config.js) before pushing.
 Sponsors/ads on Cam's personal site are NIL activity — Derrick handles compliance with SUNY Brockport.
+
+SEO/AEO: when career points, season averages or honors change, also update the static "About Cam Dyer" section + FAQ in index.html, the JSON-LD block in <head>, and llms.txt (and bump lastmod in sitemap.xml). Keep facts identical across all four.
